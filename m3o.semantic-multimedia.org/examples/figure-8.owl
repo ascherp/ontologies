@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY m3o "http://m3o.semantic-multimedia.org/" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY example "http://m3o.semantic-multimedia.org/examples#" >
+    <!ENTITY provenance "http://m3o.semantic-multimedia.org/ontology/2010/02/28/provenance.owl#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="&m3o;examples#"
+     xml:base="&m3o;examples"
+     xmlns:annotation="&m3o;ontology/2009/09/16/annotation.owl#"
+     xmlns:provenance="&m3o;ontology/2010/02/28/provenance.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:m3o="http://m3o.semantic-multimedia.org/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:example="&m3o;examples#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="&m3o;ontology/2010/02/28/annotation.owl"/>
+        <owl:imports rdf:resource="&m3o;ontology/2010/02/28/provenance.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasQuality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasRegion"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isObjectIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isObjectIncludedIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isRelatedToConcept -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isRelatedToConcept"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#base -->
+
+    <owl:ObjectProperty rdf:about="&xsd;base"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/base -->
+
+    <owl:DatatypeProperty rdf:about="&m3o;base"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#hasConfidenceValue -->
+
+    <owl:DatatypeProperty rdf:about="#hasConfidenceValue">
+        <rdfs:domain rdf:resource="#ConfidenceRegion"/>
+        <rdfs:range rdf:resource="#genid1"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegionDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue -->
+
+    <owl:DatatypeProperty rdf:about="&DUL;hasRegionDataValue"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#maxInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&xsd;maxInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#minInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&xsd;minInclusive"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#AuthorRole -->
+
+    <owl:Class rdf:about="#AuthorRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ConfidenceParameter -->
+
+    <owl:Class rdf:about="#ConfidenceParameter">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ConfidenceQuality -->
+
+    <owl:Class rdf:about="#ConfidenceQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ConfidenceRegion -->
+
+    <owl:Class rdf:about="#ConfidenceRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#Creator -->
+
+    <owl:Class rdf:about="#Creator">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#Image -->
+
+    <owl:Class rdf:about="#Image">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ManualAnnotation -->
+
+    <owl:Class rdf:about="#ManualAnnotation">
+        <rdfs:subClassOf rdf:resource="&DUL;Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotatedConcept -->
+
+    <owl:Class rdf:about="&m3o;ontology/2009/09/16/annotation.owl#AnnotatedConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationPattern -->
+
+    <owl:Class rdf:about="&m3o;ontology/2009/09/16/annotation.owl#AnnotationPattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationSituation -->
+
+    <owl:Class rdf:about="&m3o;ontology/2009/09/16/annotation.owl#AnnotationSituation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2010/02/28/provenance.owl#AppliedMethodRole -->
+
+    <owl:Class rdf:about="&m3o;ontology/2010/02/28/provenance.owl#AppliedMethodRole"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2010/02/28/provenance.owl#ProvenancePattern -->
+
+    <owl:Class rdf:about="&m3o;ontology/2010/02/28/provenance.owl#ProvenancePattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2010/02/28/provenance.owl#ProvenanceSituation -->
+
+    <owl:Class rdf:about="&m3o;ontology/2010/02/28/provenance.owl#ProvenanceSituation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Entity -->
+
+    <owl:Class rdf:about="&DUL;Entity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="&DUL;InformationObject"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Method -->
+
+    <owl:Class rdf:about="&DUL;Method"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Parameter -->
+
+    <owl:Class rdf:about="&DUL;Parameter"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Person -->
+
+    <owl:Class rdf:about="&DUL;Person"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="&DUL;Quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="&DUL;Region"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Role -->
+
+    <owl:Class rdf:about="&DUL;Role"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#restriction -->
+
+    <owl:Class rdf:about="&xsd;restriction"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#Ferdinand_Schmutzer -->
+
+    <owl:Thing rdf:about="#Ferdinand_Schmutzer">
+        <rdf:type rdf:resource="&DUL;Person"/>
+        <DUL:isObjectIncludedIn rdf:resource="#saps-2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ac-2 -->
+
+    <owl:Thing rdf:about="#ac-2">
+        <rdf:type rdf:resource="#Creator"/>
+        <DUL:classifies rdf:resource="#Ferdinand_Schmutzer"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#amr-2 -->
+
+    <provenance:AppliedMethodRole rdf:about="#amr-2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:isRelatedToConcept rdf:resource="#ac-2"/>
+        <DUL:classifies rdf:resource="#ma-1"/>
+    </provenance:AppliedMethodRole>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#apc-2 -->
+
+    <annotation:AnnotatedConcept rdf:about="#apc-2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:classifies rdf:resource="#einstein-1"/>
+    </annotation:AnnotatedConcept>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ar-2 -->
+
+    <AuthorRole rdf:about="#ar-2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:isRelatedToConcept rdf:resource="#amr-2"/>
+        <DUL:classifies rdf:resource="#john-1"/>
+    </AuthorRole>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#cf-1 -->
+
+    <ConfidenceRegion rdf:about="#cf-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <hasConfidenceValue rdf:datatype="&m3o;examples#genid1">0.95</hasConfidenceValue>
+        <DUL:hasSetting rdf:resource="#saps-2"/>
+    </ConfidenceRegion>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#cq-1 -->
+
+    <owl:Thing rdf:about="#cq-1">
+        <rdf:type rdf:resource="#ConfidenceQuality"/>
+        <DUL:hasRegion rdf:resource="#cf-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#cr-1 -->
+
+    <owl:Thing rdf:about="#cr-1">
+        <rdf:type rdf:resource="#ConfidenceParameter"/>
+        <DUL:classifies rdf:resource="#cf-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#einstein-1 -->
+
+    <Image rdf:about="#einstein-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:isObjectIncludedIn rdf:resource="#saps-2"/>
+    </Image>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#genid1 -->
+
+    <xsd:restriction>
+        <xsd:minInclusive rdf:datatype="&m3o;examples#genid1">0.0</xsd:minInclusive>
+        <xsd:maxInclusive rdf:datatype="&xsd;float">1.0</xsd:maxInclusive>
+        <xsd:base rdf:resource="&xsd;float"/>
+    </xsd:restriction>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#john-1 -->
+
+    <DUL:Entity rdf:about="#john-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:isObjectIncludedIn rdf:resource="#saps-2"/>
+    </DUL:Entity>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#ma-1 -->
+
+    <ManualAnnotation rdf:about="#ma-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasQuality rdf:resource="#cq-1"/>
+        <DUL:isObjectIncludedIn rdf:resource="#saps-2"/>
+    </ManualAnnotation>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#sapd-2 -->
+
+    <owl:Thing rdf:about="#sapd-2">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&m3o;ontology/2009/09/16/annotation.owl#AnnotationPattern"/>
+                    <rdf:Description rdf:about="&m3o;ontology/2010/02/28/provenance.owl#ProvenancePattern"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <DUL:defines rdf:resource="#ac-2"/>
+        <DUL:defines rdf:resource="#amr-2"/>
+        <DUL:defines rdf:resource="#apc-2"/>
+        <DUL:defines rdf:resource="#ar-2"/>
+        <DUL:defines rdf:resource="#cr-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#saps-2 -->
+
+    <owl:Thing rdf:about="#saps-2">
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&m3o;ontology/2009/09/16/annotation.owl#AnnotationSituation"/>
+                    <rdf:Description rdf:about="&m3o;ontology/2010/02/28/provenance.owl#ProvenanceSituation"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <DUL:satisfies rdf:resource="#sapd-2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#float -->
+
+    <owl:Thing rdf:about="&xsd;float"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

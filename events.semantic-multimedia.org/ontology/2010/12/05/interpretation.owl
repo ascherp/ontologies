@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY Causality "http://events.semantic-multimedia.org/ontology/2010/12/05/Causality.owl#" >
+    <!ENTITY Composition "http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#" >
+    <!ENTITY Correlation "http://events.semantic-multimedia.org/ontology/2010/12/05/Correlation.owl#" >
+    <!ENTITY Documentation "http://events.semantic-multimedia.org/ontology/2010/12/05/Documentation.owl#" >
+    <!ENTITY participation "http://events.semantic-multimedia.org/ontology/2010/12/05/participation.owl#" >
+    <!ENTITY Participation "http://events.semantic-multimedia.org/ontology/2010/12/04/Participation.owl#" >
+    <!ENTITY Interpretation "http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#"
+     xml:base="http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl"
+     xmlns:Causality="http://events.semantic-multimedia.org/ontology/2010/12/05/Causality.owl#"
+     xmlns:Documentation="http://events.semantic-multimedia.org/ontology/2010/12/05/Documentation.owl#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:Interpretation="http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#"
+     xmlns:Correlation="http://events.semantic-multimedia.org/ontology/2010/12/05/Correlation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Participation="http://events.semantic-multimedia.org/ontology/2010/12/04/Participation.owl#"
+     xmlns:participation="http://events.semantic-multimedia.org/ontology/2010/12/05/participation.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:Composition="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#">
+    <owl:Ontology rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/interpretation.owl">
+        <owl:imports rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/causality.owl"/>
+        <owl:imports rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/composition.owl"/>
+        <owl:imports rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/correlation.owl"/>
+        <owl:imports rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/documentation.owl"/>
+        <owl:imports rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/participation.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesEvent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesObject -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesObject"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isDefinedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isEventIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isEventIncludedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isObjectIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isObjectIncludedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Causality.owl#EventCausalitySituation -->
+
+    <owl:Class rdf:about="&Causality;EventCausalitySituation"/>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation -->
+
+    <owl:Class rdf:about="&Composition;EventCompositionSituation"/>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Correlation.owl#EventCorrelationSituation -->
+
+    <owl:Class rdf:about="&Correlation;EventCorrelationSituation"/>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Documentation.owl#EventDocumentationSituation -->
+
+    <owl:Class rdf:about="&Documentation;EventDocumentationSituation"/>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#EventInterpretationPattern -->
+
+    <owl:Class rdf:about="&Interpretation;EventInterpretationPattern">
+        <rdfs:subClassOf rdf:resource="&DUL;Pattern"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&Interpretation;Interpretant"/>
+                            <rdf:Description rdf:about="&Interpretation;RelevantSituation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&Interpretation;Interpretant"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&Interpretation;RelevantSituation"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="&Interpretation;EventInterpretationSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#EventInterpretationSituation -->
+
+    <owl:Class rdf:about="&Interpretation;EventInterpretationSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:onClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="&Interpretation;Interpretant"/>
+                    </owl:Restriction>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="&Interpretation;EventInterpretationPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesObject"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Situation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="&Interpretation;RelevantSituation"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#Interpretant -->
+
+    <owl:Class rdf:about="&Interpretation;Interpretant">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="&Interpretation;EventInterpretationPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="&Interpretation;EventInterpretationSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#RelevantCausality -->
+
+    <owl:Class rdf:about="&Interpretation;RelevantCausality">
+        <rdfs:subClassOf rdf:resource="&Interpretation;RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&Causality;EventCausalitySituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#RelevantComposition -->
+
+    <owl:Class rdf:about="&Interpretation;RelevantComposition">
+        <rdfs:subClassOf rdf:resource="&Interpretation;RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&Composition;EventCompositionSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#RelevantCorrelation -->
+
+    <owl:Class rdf:about="&Interpretation;RelevantCorrelation">
+        <rdfs:subClassOf rdf:resource="&Interpretation;RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&Correlation;EventCorrelationSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#RelevantDocumentation -->
+
+    <owl:Class rdf:about="&Interpretation;RelevantDocumentation">
+        <rdfs:subClassOf rdf:resource="&Interpretation;RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&Documentation;EventDocumentationSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#RelevantParticipation -->
+
+    <owl:Class rdf:about="&Interpretation;RelevantParticipation">
+        <rdfs:subClassOf rdf:resource="&Interpretation;RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&participation;EventParticipationSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Interpretation.owl#RelevantSituation -->
+
+    <owl:Class rdf:about="&Interpretation;RelevantSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="&Interpretation;EventInterpretationPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Situation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isObjectIncludedIn"/>
+                                <owl:someValuesFrom rdf:resource="&Interpretation;EventInterpretationSituation"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/participation.owl#EventParticipationSituation -->
+
+    <owl:Class rdf:about="&participation;EventParticipationSituation"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="&DUL;Description"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType -->
+
+    <owl:Class rdf:about="&DUL;EventType"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Pattern -->
+
+    <owl:Class rdf:about="&DUL;Pattern"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role -->
+
+    <owl:Class rdf:about="&DUL;Role"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="&DUL;Situation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#"
+     xml:base="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/composition.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpace -->
+
+    <owl:ObjectProperty rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpace">
+        <rdfs:domain rdf:resource="&DUL;Situation"/>
+        <rdfs:range rdf:resource="&DUL;SpaceRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpaceTime -->
+
+    <owl:ObjectProperty rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpaceTime">
+        <rdfs:domain rdf:resource="&DUL;Situation"/>
+        <rdfs:range rdf:resource="&DUL;SpatioTemporalRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#isSpaceIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#isSpaceIncludedIn">
+        <owl:inverseOf rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpace"/>
+        <rdfs:range rdf:resource="&DUL;Situation"/>
+        <rdfs:domain rdf:resource="&DUL;SpaceRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#isSpaceTimeIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#isSpaceTimeIncludedIn">
+        <owl:inverseOf rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpaceTime"/>
+        <rdfs:range rdf:resource="&DUL;Situation"/>
+        <rdfs:domain rdf:resource="&DUL;SpatioTemporalRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesEvent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesTime -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesTime"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isDefinedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isEventIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isEventIncludedIn"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParametrizedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isParametrizedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSettingFor"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#parametrizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;parametrizes"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Component -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Component">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Composite -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Composite">
+        <rdfs:subClassOf rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionConstraint -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionConstraint">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;hasSetting"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionPattern -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionPattern">
+        <rdfs:subClassOf rdf:resource="&DUL;Pattern"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Component"/>
+                            <rdf:Description rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Composite"/>
+                            <rdf:Description rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionConstraint"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Component"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Composite"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Component"/>
+                                    <rdf:Description rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#Composite"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpaceTime"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#SpatioTemporalConstraint"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesTime"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#TemporalConstraint"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#includesSpace"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#SpatialConstraint"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#SpatialConstraint -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#SpatialConstraint">
+        <rdfs:subClassOf rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;SpaceRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#SpatioTemporalConstraint -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#SpatioTemporalConstraint">
+        <rdfs:subClassOf rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;SpatioTemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#TemporalConstraint -->
+
+    <owl:Class rdf:about="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#TemporalConstraint">
+        <rdfs:subClassOf rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description -->
+
+    <owl:Class rdf:about="&DUL;Description"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#EventType -->
+
+    <owl:Class rdf:about="&DUL;EventType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="http://events.semantic-multimedia.org/ontology/2010/12/05/Composition.owl#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter -->
+
+    <owl:Class rdf:about="&DUL;Parameter"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Pattern -->
+
+    <owl:Class rdf:about="&DUL;Pattern"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation -->
+
+    <owl:Class rdf:about="&DUL;Relation"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="&DUL;Situation"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpaceRegion -->
+
+    <owl:Class rdf:about="&DUL;SpaceRegion"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpatioTemporalRegion -->
+
+    <owl:Class rdf:about="&DUL;SpatioTemporalRegion"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval -->
+
+    <owl:Class rdf:about="&DUL;TimeInterval"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+

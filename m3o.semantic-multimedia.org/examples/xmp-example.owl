@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY xmp-example "http://m3o.semantic-multimedia.org/examples/xmp-example.owl#" >
+    <!ENTITY xmp "http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#" >
+    <!ENTITY dublincore "http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/examples/xmp-example.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/examples/xmp-example.owl"
+     xmlns:dublincore="http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:xmp-example="http://m3o.semantic-multimedia.org/examples/xmp-example.owl#"
+     xmlns:xmp="http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl"/>
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasPart"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue -->
+
+    <owl:DatatypeProperty rdf:about="&DUL;hasRegionDataValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#LanguageConcept -->
+
+    <owl:Class rdf:about="&dublincore;LanguageConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#LanguageRegion -->
+
+    <owl:Class rdf:about="&dublincore;LanguageRegion"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#SubjectConcept -->
+
+    <owl:Class rdf:about="&dublincore;SubjectConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#SubjectRegion -->
+
+    <owl:Class rdf:about="&dublincore;SubjectRegion"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#OwnerConcept -->
+
+    <owl:Class rdf:about="&xmp;OwnerConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#OwnerRegion -->
+
+    <owl:Class rdf:about="&xmp;OwnerRegion"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RightsManagementConcept -->
+
+    <owl:Class rdf:about="&xmp;RightsManagementConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#WebStatementConcept -->
+
+    <owl:Class rdf:about="&xmp;WebStatementConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#WebStatementRegion -->
+
+    <owl:Class rdf:about="&xmp;WebStatementRegion"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotatedConcept -->
+
+    <owl:Class rdf:about="&annotation;AnnotatedConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationPattern -->
+
+    <owl:Class rdf:about="&annotation;AnnotationPattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationSituation -->
+
+    <owl:Class rdf:about="&annotation;AnnotationSituation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="&DUL;InformationObject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#ac-1 -->
+
+    <annotation:AnnotatedConcept rdf:about="#ac-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:classifies rdf:resource="#doc-1"/>
+    </annotation:AnnotatedConcept>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#doc-1 -->
+
+    <DUL:InformationObject rdf:about="#doc-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasSetting rdf:resource="#id3as-2"/>
+    </DUL:InformationObject>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#id3ap-2 -->
+
+    <annotation:AnnotationPattern rdf:about="#id3ap-2">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:defines rdf:resource="#ac-1"/>
+        <DUL:defines rdf:resource="#lc-1"/>
+        <DUL:defines rdf:resource="#rmc-1"/>
+        <DUL:defines rdf:resource="#sc-1"/>
+    </annotation:AnnotationPattern>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#id3as-2 -->
+
+    <owl:Thing rdf:about="#id3as-2">
+        <rdf:type rdf:resource="&annotation;AnnotationSituation"/>
+        <DUL:satisfies rdf:resource="#id3ap-2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#lc-1 -->
+
+    <dublincore:LanguageConcept rdf:about="#lc-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:classifies rdf:resource="#lr-1"/>
+    </dublincore:LanguageConcept>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#lr-1 -->
+
+    <owl:Thing rdf:about="#lr-1">
+        <rdf:type rdf:resource="&dublincore;LanguageRegion"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;string">en-US</DUL:hasRegionDataValue>
+        <DUL:hasSetting rdf:resource="#id3as-2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#oc-1 -->
+
+    <xmp:OwnerConcept rdf:about="#oc-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:classifies rdf:resource="#or-1"/>
+    </xmp:OwnerConcept>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#or-1 -->
+
+    <xmp:OwnerRegion rdf:about="#or-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;string">Example, Inc.</DUL:hasRegionDataValue>
+        <DUL:hasSetting rdf:resource="#id3as-2"/>
+    </xmp:OwnerRegion>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#rmc-1 -->
+
+    <owl:Thing rdf:about="#rmc-1">
+        <rdf:type rdf:resource="&xmp;RightsManagementConcept"/>
+        <DUL:hasPart rdf:resource="#oc-1"/>
+        <DUL:hasPart rdf:resource="#wtc-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#sc-1 -->
+
+    <owl:Thing rdf:about="#sc-1">
+        <rdf:type rdf:resource="&dublincore;SubjectConcept"/>
+        <DUL:classifies rdf:resource="#sr-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#sr-1 -->
+
+    <owl:Thing rdf:about="#sr-1">
+        <rdf:type rdf:resource="&dublincore;SubjectRegion"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;string"
+            >Technical Specification</DUL:hasRegionDataValue>
+        <DUL:hasSetting rdf:resource="#id3as-2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#wtc-1 -->
+
+    <owl:Thing rdf:about="#wtc-1">
+        <rdf:type rdf:resource="&xmp;WebStatementConcept"/>
+        <DUL:classifies rdf:resource="#wtr-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/xmp-example.owl#wtr-1 -->
+
+    <owl:Thing rdf:about="#wtr-1">
+        <rdf:type rdf:resource="&xmp;WebStatementRegion"/>
+        <DUL:hasRegionDataValue rdf:datatype="&xsd;anyURI"
+            >http://www.example.com/...</DUL:hasRegionDataValue>
+        <DUL:hasSetting rdf:resource="#id3as-2"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

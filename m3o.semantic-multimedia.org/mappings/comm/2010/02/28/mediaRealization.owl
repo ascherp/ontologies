@@ -1,0 +1,1112 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY extended "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#" >
+    <!ENTITY datatype "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#" >
+    <!ENTITY localization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#" >
+    <!ENTITY mediaRealization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:localization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:mediaRealization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:extended="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#"
+     xmlns:datatype="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl"/>
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl"/>
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#parametrizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;parametrizes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AnchorFrameDistance -->
+
+    <owl:Class rdf:about="&datatype;AnchorFrameDistance"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioChannels -->
+
+    <owl:Class rdf:about="&datatype;AudioChannels"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioCodingFormat -->
+
+    <owl:Class rdf:about="&datatype;AudioCodingFormat"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioDefects -->
+
+    <owl:Class rdf:about="&datatype;AudioDefects"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioPresentation -->
+
+    <owl:Class rdf:about="&datatype;AudioPresentation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Authority -->
+
+    <owl:Class rdf:about="&datatype;Authority"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AverageBitrate -->
+
+    <owl:Class rdf:about="&datatype;AverageBitrate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AverageQuantizationScale -->
+
+    <owl:Class rdf:about="&datatype;AverageQuantizationScale"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Bandwidth -->
+
+    <owl:Class rdf:about="&datatype;Bandwidth"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Bitrate -->
+
+    <owl:Class rdf:about="&datatype;Bitrate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BitsPerPixel -->
+
+    <owl:Class rdf:about="&datatype;BitsPerPixel"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BitsPerSample -->
+
+    <owl:Class rdf:about="&datatype;BitsPerSample"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorDomain -->
+
+    <owl:Class rdf:about="&datatype;ColorDomain"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSamplingComponent -->
+
+    <owl:Class rdf:about="&datatype;ColorSamplingComponent"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Difficulty -->
+
+    <owl:Class rdf:about="&datatype;Difficulty"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Emphasis -->
+
+    <owl:Class rdf:about="&datatype;Emphasis"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FileFormat -->
+
+    <owl:Class rdf:about="&datatype;FileFormat"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FileSize -->
+
+    <owl:Class rdf:about="&datatype;FileSize"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameAspectRatio -->
+
+    <owl:Class rdf:about="&datatype;FrameAspectRatio"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameHeight -->
+
+    <owl:Class rdf:about="&datatype;FrameHeight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameRate -->
+
+    <owl:Class rdf:about="&datatype;FrameRate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameStructure -->
+
+    <owl:Class rdf:about="&datatype;FrameStructure"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameWidth -->
+
+    <owl:Class rdf:about="&datatype;FrameWidth"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrontChannels -->
+
+    <owl:Class rdf:about="&datatype;FrontChannels"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#GraphicsCodingFormat -->
+
+    <owl:Class rdf:about="&datatype;GraphicsCodingFormat"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HorizontalOffset -->
+
+    <owl:Class rdf:about="&datatype;HorizontalOffset"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HorizontalPeriod -->
+
+    <owl:Class rdf:about="&datatype;HorizontalPeriod"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Importance -->
+
+    <owl:Class rdf:about="&datatype;Importance"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#InlineMediaDescriptorType -->
+
+    <owl:Class rdf:about="&datatype;InlineMediaDescriptorType"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Intensity -->
+
+    <owl:Class rdf:about="&datatype;Intensity"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#IntraFrameDistance -->
+
+    <owl:Class rdf:about="&datatype;IntraFrameDistance"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#LatticeHeight -->
+
+    <owl:Class rdf:about="&datatype;LatticeHeight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#LatticeWidth -->
+
+    <owl:Class rdf:about="&datatype;LatticeWidth"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#LfeChannels -->
+
+    <owl:Class rdf:about="&datatype;LfeChannels"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MaximumBitrate -->
+
+    <owl:Class rdf:about="&datatype;MaximumBitrate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaContent -->
+
+    <owl:Class rdf:about="&datatype;MediaContent"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaData16 -->
+
+    <owl:Class rdf:about="&datatype;MediaData16"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaData64 -->
+
+    <owl:Class rdf:about="&datatype;MediaData64"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaUri -->
+
+    <owl:Class rdf:about="&datatype;MediaUri"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Medium -->
+
+    <owl:Class rdf:about="&datatype;Medium"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MinimumBitrate -->
+
+    <owl:Class rdf:about="&datatype;MinimumBitrate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeXLeft -->
+
+    <owl:Class rdf:about="&datatype;MotionRangeXLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeXRight -->
+
+    <owl:Class rdf:about="&datatype;MotionRangeXRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeYDown -->
+
+    <owl:Class rdf:about="&datatype;MotionRangeYDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeYUp -->
+
+    <owl:Class rdf:about="&datatype;MotionRangeYUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfNonTranscodingPerBlocks -->
+
+    <owl:Class rdf:about="&datatype;NumberOfNonTranscodingPerBlocks"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfTracks -->
+
+    <owl:Class rdf:about="&datatype;NumberOfTracks"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Organization -->
+
+    <owl:Class rdf:about="&datatype;Organization"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#OtherCodingFormat -->
+
+    <owl:Class rdf:about="&datatype;OtherCodingFormat"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PixelAspectRatio -->
+
+    <owl:Class rdf:about="&datatype;PixelAspectRatio"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PixelResolution -->
+
+    <owl:Class rdf:about="&datatype;PixelResolution"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PositionalOrder -->
+
+    <owl:Class rdf:about="&datatype;PositionalOrder"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#QualityRatingType -->
+
+    <owl:Class rdf:about="&datatype;QualityRatingType"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingScheme -->
+
+    <owl:Class rdf:about="&datatype;RatingScheme"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeBest -->
+
+    <owl:Class rdf:about="&datatype;RatingSchemeBest"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeStyle -->
+
+    <owl:Class rdf:about="&datatype;RatingSchemeStyle"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeWorst -->
+
+    <owl:Class rdf:about="&datatype;RatingSchemeWorst"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingValue -->
+
+    <owl:Class rdf:about="&datatype;RatingValue"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RearChannels -->
+
+    <owl:Class rdf:about="&datatype;RearChannels"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SampleRate -->
+
+    <owl:Class rdf:about="&datatype;SampleRate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ScalableCoding -->
+
+    <owl:Class rdf:about="&datatype;ScalableCoding"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SceneCodingFormat -->
+
+    <owl:Class rdf:about="&datatype;SceneCodingFormat"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ShapeChange -->
+
+    <owl:Class rdf:about="&datatype;ShapeChange"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SideChannels -->
+
+    <owl:Class rdf:about="&datatype;SideChannels"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SpatialResolutionHint -->
+
+    <owl:Class rdf:about="&datatype;SpatialResolutionHint"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#StreamId -->
+
+    <owl:Class rdf:about="&datatype;StreamId"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#System -->
+
+    <owl:Class rdf:about="&datatype;System"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TargetChannelBitRate -->
+
+    <owl:Class rdf:about="&datatype;TargetChannelBitRate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TemporalOrder -->
+
+    <owl:Class rdf:about="&datatype;TemporalOrder"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Uncompensability -->
+
+    <owl:Class rdf:about="&datatype;Uncompensability"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdDescriptorType -->
+
+    <owl:Class rdf:about="&datatype;UniqueIdDescriptorType"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdEncoding -->
+
+    <owl:Class rdf:about="&datatype;UniqueIdEncoding"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdString -->
+
+    <owl:Class rdf:about="&datatype;UniqueIdString"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VariableBitrate -->
+
+    <owl:Class rdf:about="&datatype;VariableBitrate"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VerticalOffset -->
+
+    <owl:Class rdf:about="&datatype;VerticalOffset"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VerticalPeriod -->
+
+    <owl:Class rdf:about="&datatype;VerticalPeriod"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VideoDefects -->
+
+    <owl:Class rdf:about="&datatype;VideoDefects"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VisualCodingFormat -->
+
+    <owl:Class rdf:about="&datatype;VisualCodingFormat"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#InformationRealizationAnnotationSituation -->
+
+    <owl:Class rdf:about="&extended;InformationRealizationAnnotationSituation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#StructuredDataParameter -->
+
+    <owl:Class rdf:about="&extended;StructuredDataParameter"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#AudioChannelsDescriptorParameter -->
+
+    <owl:Class rdf:about="#AudioChannelsDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;AudioChannels"/>
+                            <rdf:Description rdf:about="&datatype;FrontChannels"/>
+                            <rdf:Description rdf:about="&datatype;LfeChannels"/>
+                            <rdf:Description rdf:about="&datatype;NumberOfTracks"/>
+                            <rdf:Description rdf:about="&datatype;RearChannels"/>
+                            <rdf:Description rdf:about="&datatype;SideChannels"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#AudioCodingDescriptorParameter -->
+
+    <owl:Class rdf:about="#AudioCodingDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;AudioCodingFormat"/>
+                            <rdf:Description rdf:about="&datatype;AudioPresentation"/>
+                            <rdf:Description rdf:about="&datatype;BitsPerSample"/>
+                            <rdf:Description rdf:about="&datatype;Emphasis"/>
+                            <rdf:Description rdf:about="&datatype;SampleRate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#BitrateDescriptorParameter -->
+
+    <owl:Class rdf:about="#BitrateDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;AverageBitrate"/>
+                            <rdf:Description rdf:about="&datatype;Bitrate"/>
+                            <rdf:Description rdf:about="&datatype;MaximumBitrate"/>
+                            <rdf:Description rdf:about="&datatype;MinimumBitrate"/>
+                            <rdf:Description rdf:about="&datatype;VariableBitrate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#CodingHintsDescriptorParameter -->
+
+    <owl:Class rdf:about="#CodingHintsDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;AnchorFrameDistance"/>
+                            <rdf:Description rdf:about="&datatype;AverageQuantizationScale"/>
+                            <rdf:Description rdf:about="&datatype;IntraFrameDistance"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ColorSamplingComponentDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorSamplingComponentDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;ColorSamplingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ColorSamplingFieldDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorSamplingFieldDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;PositionalOrder"/>
+                            <rdf:Description rdf:about="&datatype;TemporalOrder"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ColorSamplingLatticeDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorSamplingLatticeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;LatticeHeight"/>
+                            <rdf:Description rdf:about="&datatype;LatticeWidth"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ColorSamplingOffsetDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorSamplingOffsetDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;HorizontalOffset"/>
+                            <rdf:Description rdf:about="&datatype;VerticalOffset"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ColorSamplingPeriodDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorSamplingPeriodDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;HorizontalPeriod"/>
+                            <rdf:Description rdf:about="&datatype;VerticalPeriod"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#FrameDescriptorParameter -->
+
+    <owl:Class rdf:about="#FrameDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;FrameAspectRatio"/>
+                            <rdf:Description rdf:about="&datatype;FrameHeight"/>
+                            <rdf:Description rdf:about="&datatype;FrameRate"/>
+                            <rdf:Description rdf:about="&datatype;FrameStructure"/>
+                            <rdf:Description rdf:about="&datatype;FrameWidth"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#InlineMediaDescriptorParameter -->
+
+    <owl:Class rdf:about="#InlineMediaDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;InlineMediaDescriptorType"/>
+                            <rdf:Description rdf:about="&datatype;MediaData16"/>
+                            <rdf:Description rdf:about="&datatype;MediaData64"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaDescriptorParameter -->
+
+    <owl:Class rdf:about="#MediaDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="&extended;StructuredDataParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaFormatAnnotation -->
+
+    <owl:Class rdf:about="#MediaFormatAnnotation">
+        <rdfs:subClassOf rdf:resource="&extended;InformationRealizationAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaFormatDescriptorParameter -->
+
+    <owl:Class rdf:about="#MediaFormatDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#MediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;Bandwidth"/>
+                            <rdf:Description rdf:about="&datatype;FileFormat"/>
+                            <rdf:Description rdf:about="&datatype;FileSize"/>
+                            <rdf:Description rdf:about="&datatype;GraphicsCodingFormat"/>
+                            <rdf:Description rdf:about="&datatype;MediaContent"/>
+                            <rdf:Description rdf:about="&datatype;Medium"/>
+                            <rdf:Description rdf:about="&datatype;OtherCodingFormat"/>
+                            <rdf:Description rdf:about="&datatype;ScalableCoding"/>
+                            <rdf:Description rdf:about="&datatype;SceneCodingFormat"/>
+                            <rdf:Description rdf:about="&datatype;System"/>
+                            <rdf:Description rdf:about="&datatype;TargetChannelBitRate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaInstanceAnnotation -->
+
+    <owl:Class rdf:about="#MediaInstanceAnnotation">
+        <rdfs:subClassOf rdf:resource="&extended;InformationRealizationAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaLocatorDescriptorParameter -->
+
+    <owl:Class rdf:about="#MediaLocatorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;MediaUri"/>
+                            <rdf:Description rdf:about="&datatype;StreamId"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaQualityAnnotation -->
+
+    <owl:Class rdf:about="#MediaQualityAnnotation">
+        <rdfs:subClassOf rdf:resource="&extended;InformationRealizationAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaTranscodingHintsAnnotation -->
+
+    <owl:Class rdf:about="#MediaTranscodingHintsAnnotation">
+        <rdfs:subClassOf rdf:resource="&extended;InformationRealizationAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MediaTranscodingHintsDescriptorParameter -->
+
+    <owl:Class rdf:about="#MediaTranscodingHintsDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#MediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;Difficulty"/>
+                            <rdf:Description rdf:about="&datatype;Importance"/>
+                            <rdf:Description rdf:about="&datatype;SpatialResolutionHint"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MotionHintsDescriptorParameter -->
+
+    <owl:Class rdf:about="#MotionHintsDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;Intensity"/>
+                            <rdf:Description rdf:about="&datatype;Uncompensability"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#MotionRangeDescriptorParameter -->
+
+    <owl:Class rdf:about="#MotionRangeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;MotionRangeXLeft"/>
+                            <rdf:Description rdf:about="&datatype;MotionRangeXRight"/>
+                            <rdf:Description rdf:about="&datatype;MotionRangeYDown"/>
+                            <rdf:Description rdf:about="&datatype;MotionRangeYUp"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#NestedMediaDescriptorParameter -->
+
+    <owl:Class rdf:about="#NestedMediaDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="&extended;StructuredDataParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#PerceptibleDefectsDescriptorParameter -->
+
+    <owl:Class rdf:about="#PerceptibleDefectsDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;AudioDefects"/>
+                            <rdf:Description rdf:about="&datatype;VideoDefects"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#PixelDescriptorParameter -->
+
+    <owl:Class rdf:about="#PixelDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;BitsPerPixel"/>
+                            <rdf:Description rdf:about="&datatype;PixelAspectRatio"/>
+                            <rdf:Description rdf:about="&datatype;PixelResolution"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#QualityRatingDescriptorParameter -->
+
+    <owl:Class rdf:about="#QualityRatingDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;QualityRatingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#RatingDescriptorParameter -->
+
+    <owl:Class rdf:about="#RatingDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;RatingValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#RatingSchemeDescriptorParameter -->
+
+    <owl:Class rdf:about="#RatingSchemeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;RatingScheme"/>
+                            <rdf:Description rdf:about="&datatype;RatingSchemeBest"/>
+                            <rdf:Description rdf:about="&datatype;RatingSchemeStyle"/>
+                            <rdf:Description rdf:about="&datatype;RatingSchemeWorst"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ShapeHintDescriptorParameter -->
+
+    <owl:Class rdf:about="#ShapeHintDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;NumberOfNonTranscodingPerBlocks"/>
+                            <rdf:Description rdf:about="&datatype;ShapeChange"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#UniqueIdDescriptorParameter -->
+
+    <owl:Class rdf:about="#UniqueIdDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;Authority"/>
+                            <rdf:Description rdf:about="&datatype;Organization"/>
+                            <rdf:Description rdf:about="&datatype;UniqueIdDescriptorType"/>
+                            <rdf:Description rdf:about="&datatype;UniqueIdEncoding"/>
+                            <rdf:Description rdf:about="&datatype;UniqueIdString"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#VisualCodingFormatDescriptorParameter -->
+
+    <owl:Class rdf:about="#VisualCodingFormatDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedMediaDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;ColorDomain"/>
+                            <rdf:Description rdf:about="&datatype;VisualCodingFormat"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

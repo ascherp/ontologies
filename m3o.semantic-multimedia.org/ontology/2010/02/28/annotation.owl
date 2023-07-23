@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl">
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/IOLite.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isDefinedIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSettingFor"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotatedConcept -->
+
+    <owl:Class rdf:about="&annotation;AnnotatedConcept">
+        <rdfs:subClassOf rdf:resource="&DUL;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&DUL;InformationEntity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="&annotation;AnnotationPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="&annotation;AnnotationPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationConcept -->
+
+    <owl:Class rdf:about="&annotation;AnnotationConcept">
+        <rdfs:subClassOf rdf:resource="&DUL;Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="&annotation;AnnotationPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:onClass rdf:resource="&DUL;Entity"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="&annotation;AnnotationPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationPattern -->
+
+    <owl:Class rdf:about="&annotation;AnnotationPattern">
+        <rdfs:subClassOf rdf:resource="&DUL;Pattern"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&annotation;AnnotatedConcept"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="&annotation;AnnotationSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="&annotation;AnnotationConcept"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="&annotation;AnnotationSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationSituation -->
+
+    <owl:Class rdf:about="&annotation;AnnotationSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Entity"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="&annotation;AnnotationConcept"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="&annotation;AnnotationPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;InformationEntity"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="&annotation;AnnotatedConcept"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="&annotation;AnnotationPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Concept -->
+
+    <owl:Class rdf:about="&DUL;Concept"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Entity -->
+
+    <owl:Class rdf:about="&DUL;Entity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="&DUL;InformationEntity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Pattern -->
+
+    <owl:Class rdf:about="&DUL;Pattern"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="&DUL;Situation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY textual "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#" >
+    <!ENTITY extended "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#" >
+    <!ENTITY localization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#" >
+    <!ENTITY decomposition2 "http://m3o.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#" >
+    <!ENTITY decomposition "http://comm.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:textual="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#"
+     xmlns:decomposition2="http://m3o.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:localization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#"
+     xmlns:decomposition="http://comm.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:extended="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl"/>
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/ontology/2010/02/28/decomposition.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSettingFor"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#TextObject -->
+
+    <owl:Class rdf:about="&extended;TextObject"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#TextRealization -->
+
+    <owl:Class rdf:about="&extended;TextRealization"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#RootSegmentRole -->
+
+    <owl:Class rdf:about="&localization;RootSegmentRole"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#AsciiTextDecompositionPattern -->
+
+    <owl:Class rdf:about="#AsciiTextDecompositionPattern">
+        <rdfs:subClassOf rdf:resource="#TextDecompositionPattern"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#AsciiTextDecompositionSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="#AsciiTextDecompositionSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#AsciiTextDecompositionSituation -->
+
+    <owl:Class rdf:about="#AsciiTextDecompositionSituation">
+        <rdfs:subClassOf rdf:resource="#TextDecompositionSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="#AsciiTextDecompositionPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#AsciiTextDecompositionPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#AsciiTextSegmentRole -->
+
+    <owl:Class rdf:about="#AsciiTextSegmentRole">
+        <rdfs:subClassOf rdf:resource="#TextSegmentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#RootAsciiTextSegmentRole -->
+
+    <owl:Class rdf:about="#RootAsciiTextSegmentRole">
+        <rdfs:subClassOf rdf:resource="#AsciiTextSegmentRole"/>
+        <rdfs:subClassOf rdf:resource="#RootTextSegmentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#RootTextSegmentRole -->
+
+    <owl:Class rdf:about="#RootTextSegmentRole">
+        <rdfs:subClassOf rdf:resource="&localization;RootSegmentRole"/>
+        <rdfs:subClassOf rdf:resource="#TextSegmentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#TextDecompositionPattern -->
+
+    <owl:Class rdf:about="#TextDecompositionPattern">
+        <rdfs:subClassOf rdf:resource="&decomposition2;DecompositionPattern"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:allValuesFrom rdf:resource="#TextDecompositionSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#TextDecompositionSituation"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&decomposition2;ComponentConcept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                                <owl:onClass>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&extended;TextObject"/>
+                                            <rdf:Description rdf:about="&extended;TextRealization"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:onClass>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&decomposition2;CompositeConcept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                                <owl:onClass>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&extended;TextObject"/>
+                                            <rdf:Description rdf:about="&extended;TextRealization"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:onClass>
+                                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#TextDecompositionSituation -->
+
+    <owl:Class rdf:about="#TextDecompositionSituation">
+        <rdfs:subClassOf rdf:resource="&decomposition2;DecompositionSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#TextDecompositionPattern"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:allValuesFrom rdf:resource="#TextDecompositionPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&extended;TextObject"/>
+                                    <rdf:Description rdf:about="&extended;TextRealization"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="&decomposition2;CompositeConcept"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSettingFor"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&extended;TextObject"/>
+                                    <rdf:Description rdf:about="&extended;TextRealization"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="&decomposition2;ComponentConcept"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/textual.owl#TextSegmentRole -->
+
+    <owl:Class rdf:about="#TextSegmentRole">
+        <rdfs:subClassOf rdf:resource="&decomposition2;ComponentConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#ComponentConcept -->
+
+    <owl:Class rdf:about="&decomposition2;ComponentConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#CompositeConcept -->
+
+    <owl:Class rdf:about="&decomposition2;CompositeConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#DecompositionPattern -->
+
+    <owl:Class rdf:about="&decomposition2;DecompositionPattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/decomposition.owl#DecompositionSituation -->
+
+    <owl:Class rdf:about="&decomposition2;DecompositionSituation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

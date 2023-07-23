@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY extended "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#" >
+    <!ENTITY localization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:localization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:extended="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isDefinedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#StructuredDataParameter -->
+
+    <owl:Class rdf:about="&extended;StructuredDataParameter"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#Algorithm -->
+
+    <owl:Class rdf:about="#Algorithm">
+        <rdfs:subClassOf rdf:resource="&DUL;Method"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#AsciiTextLocatorDescriptorParameter -->
+
+    <owl:Class rdf:about="#AsciiTextLocatorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+        <owl:disjointWith rdf:resource="#MediaTimeDescriptorParameter"/>
+        <owl:disjointWith rdf:resource="#RegionLocatorDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#AsciiTextMaskRole -->
+
+    <owl:Class rdf:about="#AsciiTextMaskRole">
+        <rdfs:subClassOf rdf:resource="#TextualMaskRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#ComputationalTask -->
+
+    <owl:Class rdf:about="#ComputationalTask">
+        <rdfs:subClassOf rdf:resource="&DUL;Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="#Algorithm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#FigureTrajectoryDescriptorParameter -->
+
+    <owl:Class rdf:about="#FigureTrajectoryDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#KeyTimePointDescriptorParameter -->
+
+    <owl:Class rdf:about="#KeyTimePointDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#KeyValueDescriptorParameter -->
+
+    <owl:Class rdf:about="#KeyValueDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#LocalizationDescriptorParameter -->
+
+    <owl:Class rdf:about="#LocalizationDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="&extended;StructuredDataParameter"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >These parameters encode parts of localization descriptors.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#MaskRole -->
+
+    <owl:Class rdf:about="#MaskRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#MediaTimeDescriptorParameter -->
+
+    <owl:Class rdf:about="#MediaTimeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+        <owl:disjointWith rdf:resource="#RegionLocatorDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#ParameterTrajectoryDescriptorParameter -->
+
+    <owl:Class rdf:about="#ParameterTrajectoryDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#RegionLocatorDescriptorParameter -->
+
+    <owl:Class rdf:about="#RegionLocatorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#RootSegmentRole -->
+
+    <owl:Class rdf:about="#RootSegmentRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#SegmentationAlgorithm -->
+
+    <owl:Class rdf:about="#SegmentationAlgorithm">
+        <rdfs:subClassOf rdf:resource="#Algorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#SpatialMaskRole -->
+
+    <owl:Class rdf:about="#SpatialMaskRole">
+        <rdfs:subClassOf rdf:resource="#MaskRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#TemporalMaskRole -->
+
+    <owl:Class rdf:about="#TemporalMaskRole">
+        <rdfs:subClassOf rdf:resource="#MaskRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#TextualMaskRole -->
+
+    <owl:Class rdf:about="#TextualMaskRole">
+        <rdfs:subClassOf rdf:resource="#MaskRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#WholeIntervalDescriptorParameter -->
+
+    <owl:Class rdf:about="#WholeIntervalDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#LocalizationDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Method -->
+
+    <owl:Class rdf:about="&DUL;Method"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Role -->
+
+    <owl:Class rdf:about="&DUL;Role"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Task -->
+
+    <owl:Class rdf:about="&DUL;Task"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

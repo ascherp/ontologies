@@ -1,0 +1,23 @@
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+ <head>
+   <layout type="text/smil-basic-layout">
+     <root-layout height="401px" width="676px" backgroundColor="white"/>
+     <region height="401px" width="336px" top="0px" left="0px" id="left"/>
+     <region height="401px" width="336px" top="0px" left="340px" id="right"/>
+     <region soundLevel="100%" id="music"/>
+   </layout>
+ </head>
+ <body>
+   <seq id="mainPresentation">
+     <par id="scientificAchievements">
+       <img dur="60s" begin="0ms" region="left" src="Einstein.jpg" id="Einstein1"/>
+       <img dur="60s" begin="0ms" region="right" src="TimesSquare.jpg" id="timesSquare"/>
+      <!-- <text dur="60s" begin="0ms" region="right" src="" id="Text"/> -->
+     </par>
+     <par id="scientificRisks">
+       <img dur="60s" begin="0ms" region="left" src="Einstein.jpg" id="Einstein2"/>
+       <img dur="60s" begin="0ms" region="right" src="NagasakiBomb.jpg" id="nagasakiBomb"/>
+     </par>
+    </seq>
+ </body>
+</smil>

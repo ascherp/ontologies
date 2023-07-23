@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xml:base="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl">
+    <owl:Ontology rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#">
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <owl:imports rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+-->
+<rdf:Description rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#Image">
+	<rdf:subClassOf rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity">
+</rdf:Description>
+
+<rdf:Description rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#ImageRealization">
+	<rdf:subClassOf rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization">
+</rdf:Description>
+
+<rdf:Description rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#Presentation">
+	<rdf:subClassOf rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl#InformationEntity">
+</rdf:Description>
+
+<rdf:Description rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#GeoLocationQuality">
+	<rdf:subClassOf rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl#Region">
+</rdf:Description>
+
+<rdf:Description rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#Point">
+	<rdf:subClassOf rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl#Region">
+	<rdf:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+</rdf:Description>
+
+<!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals??
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+-->
+
+	<!--	http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#EinsteinIO 
+	 	EinsteinIO repräsentiert die Tatsache, dass es ein Bild von Einstein gibt	-->
+
+<rdf:Description rdf:about="http://m3o.semantic-multimedia.org/m3o-presentation-extension.owl#EinsteinIO">
+	<rdf:type rdf:resource="http://ontologydesignpatterns.org/ont/dul/DUL.owl#InformationObject">
+</rdf:Description>
+
+<rdf:RDF>
+

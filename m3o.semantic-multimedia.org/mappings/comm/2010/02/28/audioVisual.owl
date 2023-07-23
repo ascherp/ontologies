@@ -1,0 +1,2046 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY extended "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#" >
+    <!ENTITY datatype "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#" >
+    <!ENTITY audioVisual "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#" >
+    <!ENTITY localization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#" >
+    <!ENTITY mediaRealization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:localization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:mediaRealization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:extended="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#"
+     xmlns:audioVisual="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#"
+     xmlns:datatype="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl"/>
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl"/>
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#parametrizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;parametrizes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CameraMotionAnnotationPattern -->
+
+    <owl:Class rdf:about="#CameraMotionAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CameraMotionAnnotationSituation -->
+
+    <owl:Class rdf:about="#CameraMotionAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient14DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient14DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient20DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient20DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient27DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient27DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient2DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient2DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbacCoefficient2"/>
+                            <rdf:Description rdf:about="&datatype;CracCoefficient2"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient5DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient5DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbacCoefficient5"/>
+                            <rdf:Description rdf:about="&datatype;CracCoefficient5"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient63DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient63DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbacCoefficient63"/>
+                            <rdf:Description rdf:about="&datatype;CracCoefficient63"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#CbacCracCoefficient9DescriptorParameter -->
+
+    <owl:Class rdf:about="#CbacCracCoefficient9DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbacCoefficient9"/>
+                            <rdf:Description rdf:about="&datatype;CracCoefficient9"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;SpatialCoherency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorLayoutAnnotationPattern -->
+
+    <owl:Class rdf:about="#ColorLayoutAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorLayoutAnnotationSituation -->
+
+    <owl:Class rdf:about="#ColorLayoutAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorLayoutDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorLayoutDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ColorDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbdcCoefficient"/>
+                            <rdf:Description rdf:about="&datatype;CrdcCoefficient"/>
+                            <rdf:Description rdf:about="&datatype;YdcCoefficient"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorQuantizationComponentDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorQuantizationComponentDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;ColorComponent"/>
+                            <rdf:Description rdf:about="&datatype;NumberOfBinsPerComponent"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorSpaceDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorSpaceDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;ColorReferenceFlag"/>
+                            <rdf:Description rdf:about="&datatype;ColorSpaceTransformationMatrix"/>
+                            <rdf:Description rdf:about="&datatype;ColorSpaceType"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorStructureAnnotationPattern -->
+
+    <owl:Class rdf:about="#ColorStructureAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorStructureAnnotationSituation -->
+
+    <owl:Class rdf:about="#ColorStructureAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ColorStructureDescriptorParameter -->
+
+    <owl:Class rdf:about="#ColorStructureDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ColorDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;ColorQuantization"/>
+                            <rdf:Description rdf:about="&datatype;ColorStructureValues"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ContourShapeAnnotationPattern -->
+
+    <owl:Class rdf:about="#ContourShapeAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ContourShapeAnnotationSituation -->
+
+    <owl:Class rdf:about="#ContourShapeAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ContourShapeDescriptorParameter -->
+
+    <owl:Class rdf:about="#ContourShapeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ShapeDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;GlobalCurvature"/>
+                            <rdf:Description rdf:about="&datatype;HighestPeakY"/>
+                            <rdf:Description rdf:about="&datatype;PrototypeCurvature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ContourShapePeakDescriptorParameter -->
+
+    <owl:Class rdf:about="#ContourShapePeakDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;PeakX"/>
+                            <rdf:Description rdf:about="&datatype;PeakY"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#DominantColorAnnotationPattern -->
+
+    <owl:Class rdf:about="#DominantColorAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#DominantColorAnnotationSituation -->
+
+    <owl:Class rdf:about="#DominantColorAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#DominantColorDescriptorParameter -->
+
+    <owl:Class rdf:about="#DominantColorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ColorDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#DominantColorValueDescriptorParameter -->
+
+    <owl:Class rdf:about="#DominantColorValueDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;ColorIndex"/>
+                            <rdf:Description rdf:about="&datatype;ColorPercentage"/>
+                            <rdf:Description rdf:about="&datatype;ColorVariance"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#EdgeHistogramAnnotationPattern -->
+
+    <owl:Class rdf:about="#EdgeHistogramAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#EdgeHistogramAnnotationSituation -->
+
+    <owl:Class rdf:about="#EdgeHistogramAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#EdgeHistogramDescriptorParameter -->
+
+    <owl:Class rdf:about="#EdgeHistogramDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#TextureDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;BinCounts"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#FocusOfExpansionDescriptorParameter -->
+
+    <owl:Class rdf:about="#FocusOfExpansionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;HorzontalPosition"/>
+                            <rdf:Description rdf:about="&datatype;VerticalOffset"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#FractionalPresenceDescriptorParameter -->
+
+    <owl:Class rdf:about="#FractionalPresenceDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;FractionalBoomDown"/>
+                            <rdf:Description rdf:about="&datatype;FractionalBoomUp"/>
+                            <rdf:Description rdf:about="&datatype;FractionalDollyBackward"/>
+                            <rdf:Description rdf:about="&datatype;FractionalDollyForward"/>
+                            <rdf:Description rdf:about="&datatype;FractionalFixed"/>
+                            <rdf:Description rdf:about="&datatype;FractionalPanLeft"/>
+                            <rdf:Description rdf:about="&datatype;FractionalPanRight"/>
+                            <rdf:Description rdf:about="&datatype;FractionalRollAntiClockwise"/>
+                            <rdf:Description rdf:about="&datatype;FractionalRollClockwise"/>
+                            <rdf:Description rdf:about="&datatype;FractionalTiltDown"/>
+                            <rdf:Description rdf:about="&datatype;FractionalTiltUp"/>
+                            <rdf:Description rdf:about="&datatype;FractionalTrackLeft"/>
+                            <rdf:Description rdf:about="&datatype;FractionalTrackRight"/>
+                            <rdf:Description rdf:about="&datatype;FractionalZoomIn"/>
+                            <rdf:Description rdf:about="&datatype;FractionalZoomOut"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#GofGopColorAnnotationPattern -->
+
+    <owl:Class rdf:about="#GofGopColorAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#GofGopColorAnnotationSituation -->
+
+    <owl:Class rdf:about="#GofGopColorAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#GofGopColorDescriptorParameter -->
+
+    <owl:Class rdf:about="#GofGopColorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ColorDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;Aggregation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#HomogeneousTextureAnnotationPattern -->
+
+    <owl:Class rdf:about="#HomogeneousTextureAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#HomogeneousTextureAnnotationSituation -->
+
+    <owl:Class rdf:about="#HomogeneousTextureAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#HomogeneousTextureDescriptorParameter -->
+
+    <owl:Class rdf:about="#HomogeneousTextureDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#TextureDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;AverageTexture"/>
+                            <rdf:Description rdf:about="&datatype;Energy"/>
+                            <rdf:Description rdf:about="&datatype;EnergyDeviation"/>
+                            <rdf:Description rdf:about="&datatype;StandardDeviation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MixtureAmountOfMotionDescriptorParameter -->
+
+    <owl:Class rdf:about="#MixtureAmountOfMotionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;MixtureAmountBoomDown"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountBoomUp"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountDollyBackward"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountDollyForward"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountPanLeft"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountPanRight"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountRollAntiClockwise"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountRollClockwise"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountTiltDown"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountTiltUp"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountTrackLeft"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountTrackRight"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountZoomIn"/>
+                            <rdf:Description rdf:about="&datatype;MixtureAmountZoomOut"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionActivityAnnotationPattern -->
+
+    <owl:Class rdf:about="#MotionActivityAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionActivityAnnotationSituation -->
+
+    <owl:Class rdf:about="#MotionActivityAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionActivityDescriptorParameter -->
+
+    <owl:Class rdf:about="#MotionActivityDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#MotionDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;DominantDirection"/>
+                            <rdf:Description rdf:about="&datatype;Intensity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionDescriptorParameter -->
+
+    <owl:Class rdf:about="#MotionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionTrajectoryAnnotationPattern -->
+
+    <owl:Class rdf:about="#MotionTrajectoryAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionTrajectoryAnnotationSituation -->
+
+    <owl:Class rdf:about="#MotionTrajectoryAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#MotionTrajectoryDescriptorParameter -->
+
+    <owl:Class rdf:about="#MotionTrajectoryDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#MotionDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;CameraFollows"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#NestedVisualDescriptorParameter -->
+
+    <owl:Class rdf:about="#NestedVisualDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="&extended;StructuredDataParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbacCoefficient20"/>
+                            <rdf:Description rdf:about="&datatype;CracCoefficient20"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;CbacCoefficient27"/>
+                            <rdf:Description rdf:about="&datatype;CracCoefficient27"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#NonMixtureAmountOfMotionDescriptorParameter -->
+
+    <owl:Class rdf:about="#NonMixtureAmountOfMotionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountBoomDown"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountBoomUp"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountDollyBackward"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountDollyForward"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountPanLeft"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountPanRight"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountRollAntiClockwise"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountRollClockwise"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountTiltDown"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountTiltUp"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountTrackLeft"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountTrackRight"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountZoomIn"/>
+                            <rdf:Description rdf:about="&datatype;NonMixtureAmountZoomOut"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ParametricCoordinateDefinitionDescriptorParameter -->
+
+    <owl:Class rdf:about="#ParametricCoordinateDefinitionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;OriginX"/>
+                            <rdf:Description rdf:about="&datatype;OriginY"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ParametricMotionAnnotationPattern -->
+
+    <owl:Class rdf:about="#ParametricMotionAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ParametricMotionAnnotationSituation -->
+
+    <owl:Class rdf:about="#ParametricMotionAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ParametricMotionDescriptorParameter -->
+
+    <owl:Class rdf:about="#ParametricMotionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#MotionDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#RegionShapeAnnotationPattern -->
+
+    <owl:Class rdf:about="#RegionShapeAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#RegionShapeAnnotationSituation -->
+
+    <owl:Class rdf:about="#RegionShapeAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#RegionShapeDescriptorParameter -->
+
+    <owl:Class rdf:about="#RegionShapeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ShapeDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;MagnitudeOfArt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ScalableColorAnnotationPattern -->
+
+    <owl:Class rdf:about="#ScalableColorAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ScalableColorAnnotationSituation -->
+
+    <owl:Class rdf:about="#ScalableColorAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ScalableColorDescriptorParameter -->
+
+    <owl:Class rdf:about="#ScalableColorDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ColorDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;NumberOfBitplanesDiscarded"/>
+                            <rdf:Description rdf:about="&datatype;NumberOfCoefficents"/>
+                            <rdf:Description rdf:about="&datatype;ScalableColorCoefficients"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Shape3dAnnotationPattern -->
+
+    <owl:Class rdf:about="#Shape3dAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Shape3dAnnotationSituation -->
+
+    <owl:Class rdf:about="#Shape3dAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Shape3dDescriptorParameter -->
+
+    <owl:Class rdf:about="#Shape3dDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#ShapeDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;BitsPerBin"/>
+                            <rdf:Description rdf:about="&datatype;PlanarSurfaces"/>
+                            <rdf:Description rdf:about="&datatype;SingularSurfaces"/>
+                            <rdf:Description rdf:about="&datatype;Spectrum"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#ShapeDescriptorParameter -->
+
+    <owl:Class rdf:about="#ShapeDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#SpatialDistributionParametersDescriptorParameter -->
+
+    <owl:Class rdf:about="#SpatialDistributionParametersDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;NumberOfLongRuns"/>
+                            <rdf:Description rdf:about="&datatype;NumberOfMediumRuns"/>
+                            <rdf:Description rdf:about="&datatype;NumberOfShortRuns"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TextureBrowsingAnnotationPattern -->
+
+    <owl:Class rdf:about="#TextureBrowsingAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TextureBrowsingAnnotationSituation -->
+
+    <owl:Class rdf:about="#TextureBrowsingAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TextureBrowsingComponentDescriptorParameter -->
+
+    <owl:Class rdf:about="#TextureBrowsingComponentDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;TextureBrowsingDirection"/>
+                            <rdf:Description rdf:about="&datatype;TextureBrowsingScale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TextureBrowsingDescriptorParameter -->
+
+    <owl:Class rdf:about="#TextureBrowsingDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#TextureDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;TextureBrowsingRegularity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TextureDescriptorParameter -->
+
+    <owl:Class rdf:about="#TextureDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#VisualDescriptorParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TrajectoryCoordinateDefinitionDescriptorParameter -->
+
+    <owl:Class rdf:about="#TrajectoryCoordinateDefinitionDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;TrajectoryCoordinateDefinitionUnits"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#TrajectoryCoordinateRepresentationDescriptorParameter -->
+
+    <owl:Class rdf:about="#TrajectoryCoordinateRepresentationDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&datatype;TrajectoryX"/>
+                            <rdf:Description rdf:about="&datatype;TrajectoryY"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Vector16DescriptorParameter -->
+
+    <owl:Class rdf:about="#Vector16DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;Vector16"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Vector256DescriptorParameter -->
+
+    <owl:Class rdf:about="#Vector256DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;Vector256"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Vector4DescriptorParameter -->
+
+    <owl:Class rdf:about="#Vector4DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;Vector4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#Vector64DescriptorParameter -->
+
+    <owl:Class rdf:about="#Vector64DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;Vector64"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#VisualDescriptorAnnotationPattern -->
+
+    <owl:Class rdf:about="#VisualDescriptorAnnotationPattern">
+        <rdfs:subClassOf rdf:resource="&extended;InformationRealizationAnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#VisualDescriptorAnnotationSituation -->
+
+    <owl:Class rdf:about="#VisualDescriptorAnnotationSituation">
+        <rdfs:subClassOf rdf:resource="&extended;InformationRealizationAnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#VisualDescriptorParameter -->
+
+    <owl:Class rdf:about="#VisualDescriptorParameter">
+        <rdfs:subClassOf rdf:resource="&extended;StructuredDataParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient14DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient14DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient14"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient20DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient20DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient20"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient27DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient27DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient27"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient2DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient2DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient5DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient5DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient63DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient63DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient63"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#YacCoefficient9DescriptorParameter -->
+
+    <owl:Class rdf:about="#YacCoefficient9DescriptorParameter">
+        <rdfs:subClassOf rdf:resource="#NestedVisualDescriptorParameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&datatype;YacCoefficient9"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Aggregation -->
+
+    <owl:Class rdf:about="&datatype;Aggregation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AverageTexture -->
+
+    <owl:Class rdf:about="&datatype;AverageTexture"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BinCounts -->
+
+    <owl:Class rdf:about="&datatype;BinCounts"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BitsPerBin -->
+
+    <owl:Class rdf:about="&datatype;BitsPerBin"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CameraFollows -->
+
+    <owl:Class rdf:about="&datatype;CameraFollows"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient2 -->
+
+    <owl:Class rdf:about="&datatype;CbacCoefficient2"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient20 -->
+
+    <owl:Class rdf:about="&datatype;CbacCoefficient20"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient27 -->
+
+    <owl:Class rdf:about="&datatype;CbacCoefficient27"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient5 -->
+
+    <owl:Class rdf:about="&datatype;CbacCoefficient5"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient63 -->
+
+    <owl:Class rdf:about="&datatype;CbacCoefficient63"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient9 -->
+
+    <owl:Class rdf:about="&datatype;CbacCoefficient9"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbdcCoefficient -->
+
+    <owl:Class rdf:about="&datatype;CbdcCoefficient"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorComponent -->
+
+    <owl:Class rdf:about="&datatype;ColorComponent"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorIndex -->
+
+    <owl:Class rdf:about="&datatype;ColorIndex"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorPercentage -->
+
+    <owl:Class rdf:about="&datatype;ColorPercentage"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorQuantization -->
+
+    <owl:Class rdf:about="&datatype;ColorQuantization"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorReferenceFlag -->
+
+    <owl:Class rdf:about="&datatype;ColorReferenceFlag"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSpaceTransformationMatrix -->
+
+    <owl:Class rdf:about="&datatype;ColorSpaceTransformationMatrix"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSpaceType -->
+
+    <owl:Class rdf:about="&datatype;ColorSpaceType">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Corrresponds to the &quot;Type&quot; element of the &quot;ColorSpaceType&quot; (part 3, page 30). The value of the &quot;Aggregation&quot; is a string of {RGB HSV HMMD LinearMatrix YCbCr Monochrome }.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorStructureValues -->
+
+    <owl:Class rdf:about="&datatype;ColorStructureValues"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorVariance -->
+
+    <owl:Class rdf:about="&datatype;ColorVariance"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient2 -->
+
+    <owl:Class rdf:about="&datatype;CracCoefficient2"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient20 -->
+
+    <owl:Class rdf:about="&datatype;CracCoefficient20"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient27 -->
+
+    <owl:Class rdf:about="&datatype;CracCoefficient27"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient5 -->
+
+    <owl:Class rdf:about="&datatype;CracCoefficient5"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient63 -->
+
+    <owl:Class rdf:about="&datatype;CracCoefficient63"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient9 -->
+
+    <owl:Class rdf:about="&datatype;CracCoefficient9"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CrdcCoefficient -->
+
+    <owl:Class rdf:about="&datatype;CrdcCoefficient"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#DominantDirection -->
+
+    <owl:Class rdf:about="&datatype;DominantDirection"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Energy -->
+
+    <owl:Class rdf:about="&datatype;Energy"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#EnergyDeviation -->
+
+    <owl:Class rdf:about="&datatype;EnergyDeviation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalBoomDown -->
+
+    <owl:Class rdf:about="&datatype;FractionalBoomDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalBoomUp -->
+
+    <owl:Class rdf:about="&datatype;FractionalBoomUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalDollyBackward -->
+
+    <owl:Class rdf:about="&datatype;FractionalDollyBackward"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalDollyForward -->
+
+    <owl:Class rdf:about="&datatype;FractionalDollyForward"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalFixed -->
+
+    <owl:Class rdf:about="&datatype;FractionalFixed"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalPanLeft -->
+
+    <owl:Class rdf:about="&datatype;FractionalPanLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalPanRight -->
+
+    <owl:Class rdf:about="&datatype;FractionalPanRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalRollAntiClockwise -->
+
+    <owl:Class rdf:about="&datatype;FractionalRollAntiClockwise"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalRollClockwise -->
+
+    <owl:Class rdf:about="&datatype;FractionalRollClockwise"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTiltDown -->
+
+    <owl:Class rdf:about="&datatype;FractionalTiltDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTiltUp -->
+
+    <owl:Class rdf:about="&datatype;FractionalTiltUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTrackLeft -->
+
+    <owl:Class rdf:about="&datatype;FractionalTrackLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTrackRight -->
+
+    <owl:Class rdf:about="&datatype;FractionalTrackRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalZoomIn -->
+
+    <owl:Class rdf:about="&datatype;FractionalZoomIn"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalZoomOut -->
+
+    <owl:Class rdf:about="&datatype;FractionalZoomOut"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#GlobalCurvature -->
+
+    <owl:Class rdf:about="&datatype;GlobalCurvature"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HighestPeakY -->
+
+    <owl:Class rdf:about="&datatype;HighestPeakY"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HorzontalPosition -->
+
+    <owl:Class rdf:about="&datatype;HorzontalPosition"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Intensity -->
+
+    <owl:Class rdf:about="&datatype;Intensity"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MagnitudeOfArt -->
+
+    <owl:Class rdf:about="&datatype;MagnitudeOfArt"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountBoomDown -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountBoomDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountBoomUp -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountBoomUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountDollyBackward -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountDollyBackward"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountDollyForward -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountDollyForward"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountPanLeft -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountPanLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountPanRight -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountPanRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountRollAntiClockwise -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountRollAntiClockwise"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountRollClockwise -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountRollClockwise"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTiltDown -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountTiltDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTiltUp -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountTiltUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTrackLeft -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountTrackLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTrackRight -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountTrackRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountZoomIn -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountZoomIn"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountZoomOut -->
+
+    <owl:Class rdf:about="&datatype;MixtureAmountZoomOut"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountBoomDown -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountBoomDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountBoomUp -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountBoomUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountDollyBackward -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountDollyBackward"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountDollyForward -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountDollyForward"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountPanLeft -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountPanLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountPanRight -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountPanRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountRollAntiClockwise -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountRollAntiClockwise"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountRollClockwise -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountRollClockwise"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTiltDown -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountTiltDown"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTiltUp -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountTiltUp"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTrackLeft -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountTrackLeft"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTrackRight -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountTrackRight"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountZoomIn -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountZoomIn"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountZoomOut -->
+
+    <owl:Class rdf:about="&datatype;NonMixtureAmountZoomOut"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfBinsPerComponent -->
+
+    <owl:Class rdf:about="&datatype;NumberOfBinsPerComponent"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfBitplanesDiscarded -->
+
+    <owl:Class rdf:about="&datatype;NumberOfBitplanesDiscarded"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfCoefficents -->
+
+    <owl:Class rdf:about="&datatype;NumberOfCoefficents"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfLongRuns -->
+
+    <owl:Class rdf:about="&datatype;NumberOfLongRuns"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfMediumRuns -->
+
+    <owl:Class rdf:about="&datatype;NumberOfMediumRuns"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfShortRuns -->
+
+    <owl:Class rdf:about="&datatype;NumberOfShortRuns"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#OriginX -->
+
+    <owl:Class rdf:about="&datatype;OriginX"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#OriginY -->
+
+    <owl:Class rdf:about="&datatype;OriginY"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PeakX -->
+
+    <owl:Class rdf:about="&datatype;PeakX"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PeakY -->
+
+    <owl:Class rdf:about="&datatype;PeakY"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PlanarSurfaces -->
+
+    <owl:Class rdf:about="&datatype;PlanarSurfaces"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PrototypeCurvature -->
+
+    <owl:Class rdf:about="&datatype;PrototypeCurvature"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ScalableColorCoefficients -->
+
+    <owl:Class rdf:about="&datatype;ScalableColorCoefficients"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SingularSurfaces -->
+
+    <owl:Class rdf:about="&datatype;SingularSurfaces"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SpatialCoherency -->
+
+    <owl:Class rdf:about="&datatype;SpatialCoherency"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Spectrum -->
+
+    <owl:Class rdf:about="&datatype;Spectrum"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#StandardDeviation -->
+
+    <owl:Class rdf:about="&datatype;StandardDeviation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingDirection -->
+
+    <owl:Class rdf:about="&datatype;TextureBrowsingDirection"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingRegularity -->
+
+    <owl:Class rdf:about="&datatype;TextureBrowsingRegularity"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingScale -->
+
+    <owl:Class rdf:about="&datatype;TextureBrowsingScale"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryCoordinateDefinitionUnits -->
+
+    <owl:Class rdf:about="&datatype;TrajectoryCoordinateDefinitionUnits"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryX -->
+
+    <owl:Class rdf:about="&datatype;TrajectoryX"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryY -->
+
+    <owl:Class rdf:about="&datatype;TrajectoryY"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector16 -->
+
+    <owl:Class rdf:about="&datatype;Vector16"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector256 -->
+
+    <owl:Class rdf:about="&datatype;Vector256"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector4 -->
+
+    <owl:Class rdf:about="&datatype;Vector4"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector64 -->
+
+    <owl:Class rdf:about="&datatype;Vector64"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VerticalOffset -->
+
+    <owl:Class rdf:about="&datatype;VerticalOffset"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient14 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient14"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient2 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient2"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient20 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient20"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient27 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient27"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient5 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient5"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient63 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient63"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient9 -->
+
+    <owl:Class rdf:about="&datatype;YacCoefficient9"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YdcCoefficient -->
+
+    <owl:Class rdf:about="&datatype;YdcCoefficient"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#ImageObject -->
+
+    <owl:Class rdf:about="&extended;ImageObject"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#ImageRealization -->
+
+    <owl:Class rdf:about="&extended;ImageRealization"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#InformationRealizationAnnotationPattern -->
+
+    <owl:Class rdf:about="&extended;InformationRealizationAnnotationPattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#InformationRealizationAnnotationSituation -->
+
+    <owl:Class rdf:about="&extended;InformationRealizationAnnotationSituation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#StructuredDataParameter -->
+
+    <owl:Class rdf:about="&extended;StructuredDataParameter"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#VideoObject -->
+
+    <owl:Class rdf:about="&extended;VideoObject"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/extended.owl#VideoRealization -->
+
+    <owl:Class rdf:about="&extended;VideoRealization"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/localization.owl#RootSegmentRole -->
+
+    <owl:Class rdf:about="&localization;RootSegmentRole"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#ImageTextRole -->
+
+    <owl:Class rdf:about="&mediaRealization;ImageTextRole">
+        <rdfs:subClassOf rdf:resource="&mediaRealization;StillRegionRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#RootImageTextRole -->
+
+    <owl:Class rdf:about="&mediaRealization;RootImageTextRole">
+        <rdfs:subClassOf rdf:resource="&mediaRealization;ImageTextRole"/>
+        <rdfs:subClassOf rdf:resource="&mediaRealization;RootStillRegionRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#RootStillRegionRole -->
+
+    <owl:Class rdf:about="&mediaRealization;RootStillRegionRole">
+        <rdfs:subClassOf rdf:resource="&localization;RootSegmentRole"/>
+        <rdfs:subClassOf rdf:resource="&mediaRealization;StillRegionRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#RootVideoSegmentRole -->
+
+    <owl:Class rdf:about="&mediaRealization;RootVideoSegmentRole">
+        <rdfs:subClassOf rdf:resource="&localization;RootSegmentRole"/>
+        <rdfs:subClassOf rdf:resource="&mediaRealization;VideoSegmentRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#StillRegionRole -->
+
+    <owl:Class rdf:about="&mediaRealization;StillRegionRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&extended;ImageObject"/>
+                            <rdf:Description rdf:about="&extended;ImageRealization"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/mediaRealization.owl#VideoSegmentRole -->
+
+    <owl:Class rdf:about="&mediaRealization;VideoSegmentRole">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&extended;VideoObject"/>
+                            <rdf:Description rdf:about="&extended;VideoRealization"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Role -->
+
+    <owl:Class rdf:about="&DUL;Role"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

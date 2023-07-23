@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dublincore "http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl"
+     xmlns:dublincore="http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#ContributorConcept -->
+
+    <owl:Class rdf:about="&dublincore;ContributorConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#ContributorRegion -->
+
+    <owl:Class rdf:about="&dublincore;ContributorRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#CoverageConcept -->
+
+    <owl:Class rdf:about="&dublincore;CoverageConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#CoverageRegion -->
+
+    <owl:Class rdf:about="&dublincore;CoverageRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#CreatorConcept -->
+
+    <owl:Class rdf:about="&dublincore;CreatorConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#CreatorRegion -->
+
+    <owl:Class rdf:about="&dublincore;CreatorRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#DateConcept -->
+
+    <owl:Class rdf:about="&dublincore;DateConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#DateRegion -->
+
+    <owl:Class rdf:about="&dublincore;DateRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#FormatConcept -->
+
+    <owl:Class rdf:about="&dublincore;FormatConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#FormatRegion -->
+
+    <owl:Class rdf:about="&dublincore;FormatRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#LanguageConcept -->
+
+    <owl:Class rdf:about="&dublincore;LanguageConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#LanguageRegion -->
+
+    <owl:Class rdf:about="&dublincore;LanguageRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#PublisherConcept -->
+
+    <owl:Class rdf:about="&dublincore;PublisherConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#PublisherRegion -->
+
+    <owl:Class rdf:about="&dublincore;PublisherRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#RelationConcept -->
+
+    <owl:Class rdf:about="&dublincore;RelationConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#RelationRegion -->
+
+    <owl:Class rdf:about="&dublincore;RelationRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#RightsConcept -->
+
+    <owl:Class rdf:about="&dublincore;RightsConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#RightsRegion -->
+
+    <owl:Class rdf:about="&dublincore;RightsRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#SourceConcept -->
+
+    <owl:Class rdf:about="&dublincore;SourceConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#SourceRegion -->
+
+    <owl:Class rdf:about="&dublincore;SourceRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#SubjectConcept -->
+
+    <owl:Class rdf:about="&dublincore;SubjectConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#SubjectRegion -->
+
+    <owl:Class rdf:about="&dublincore;SubjectRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#TitleConcept -->
+
+    <owl:Class rdf:about="&dublincore;TitleConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#TitleRegion -->
+
+    <owl:Class rdf:about="&dublincore;TitleRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#TypeConcept -->
+
+    <owl:Class rdf:about="&dublincore;TypeConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/dublincore.owl#TypeRegion -->
+
+    <owl:Class rdf:about="&dublincore;TypeRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+

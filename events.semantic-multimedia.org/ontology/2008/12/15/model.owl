@@ -1,0 +1,1165 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY model "http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#"
+     xml:base="http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:model="http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#hasEventParticipant -->
+
+    <owl:ObjectProperty rdf:about="#hasEventParticipant">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasParticipant"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#DescribedEvent"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#Participant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#includesSpace -->
+
+    <owl:ObjectProperty rdf:about="#includesSpace">
+        <owl:inverseOf rdf:resource="#isSpaceIncludedIn"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#includesSpaceTime -->
+
+    <owl:ObjectProperty rdf:about="#includesSpaceTime">
+        <owl:inverseOf rdf:resource="#isSpaceTimeIncludedIn"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#isEventParticipant -->
+
+    <owl:ObjectProperty rdf:about="#isEventParticipant">
+        <owl:inverseOf rdf:resource="#hasEventParticipant"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;isParticipantIn"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#Participant"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="#DescribedEvent"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#isSpaceIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="#isSpaceIncludedIn">
+        <rdfs:range rdf:resource="&DUL;Situation"/>
+        <rdfs:domain rdf:resource="&DUL;SpaceRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#isSpaceTimeIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="#isSpaceTimeIncludedIn">
+        <rdfs:range rdf:resource="&DUL;Situation"/>
+        <rdfs:domain rdf:resource="&DUL;SpatioTemporalRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasParticipant"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesEvent"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#includesObject -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesObject"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#includesTime -->
+
+    <owl:ObjectProperty rdf:about="&DUL;includesTime"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isClassifiedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isDefinedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isDefinedIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isEventIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isEventIncludedIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isObjectIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isObjectIncludedIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isParametrizedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isParametrizedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isParticipantIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isParticipantIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSatisfiedBy"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isSettingFor -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isSettingFor"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#parametrizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;parametrizes"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Cause -->
+
+    <owl:Class rdf:about="#Cause">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventCausalityDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventCausalitySituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Component -->
+
+    <owl:Class rdf:about="#Component">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventCompositionDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Composite -->
+
+    <owl:Class rdf:about="#Composite">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventCompositionDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Correlate -->
+
+    <owl:Class rdf:about="#Correlate">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventCorrelationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventCorrelationSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#DescribedEvent -->
+
+    <owl:Class rdf:about="#DescribedEvent">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventParticipationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventParticipationSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Effect -->
+
+    <owl:Class rdf:about="#Effect">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventCausalitySituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventCausalityDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCausalityDescription -->
+
+    <owl:Class rdf:about="#EventCausalityDescription">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Cause"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#EventCausalitySituation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Justification"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Cause"/>
+                            <rdf:Description rdf:about="#Effect"/>
+                            <rdf:Description rdf:about="#Justification"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Effect"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCausalitySituation -->
+
+    <owl:Class rdf:about="#EventCausalitySituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#EventCausalityDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:onClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="#Cause"/>
+                    </owl:Restriction>
+                </owl:onClass>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesObject"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Description"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="#Justification"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:onClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="#Effect"/>
+                    </owl:Restriction>
+                </owl:onClass>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCompositionConstraint -->
+
+    <owl:Class rdf:about="#EventCompositionConstraint">
+        <rdfs:subClassOf rdf:resource="&DUL;Parameter"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:allValuesFrom rdf:resource="#EventCompositionDescription"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;hasSetting"/>
+                        <owl:someValuesFrom rdf:resource="#EventCompositionSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCompositionDescription -->
+
+    <owl:Class rdf:about="#EventCompositionDescription">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#EventCompositionSituation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Component"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Composite"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Component"/>
+                            <rdf:Description rdf:about="#Composite"/>
+                            <rdf:Description rdf:about="#EventCompositionConstraint"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCompositionSituation -->
+
+    <owl:Class rdf:about="#EventCompositionSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#Component"/>
+                                    <rdf:Description rdf:about="#Composite"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#includesSpaceTime"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                        <owl:someValuesFrom rdf:resource="#SaptioTemporalConstraint"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesTime"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                        <owl:someValuesFrom rdf:resource="#TemporalConstraint"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#includesSpace"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isParametrizedBy"/>
+                        <owl:someValuesFrom rdf:resource="#SpatialConstraint"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#EventCompositionDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCorrelationDescription -->
+
+    <owl:Class rdf:about="#EventCorrelationDescription">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Correlate"/>
+                            <rdf:Description rdf:about="#Justification"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Correlate"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Justification"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#EventCorrelationSituation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventCorrelationSituation -->
+
+    <owl:Class rdf:about="#EventCorrelationSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#EventCorrelationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:onClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="#Correlate"/>
+                    </owl:Restriction>
+                </owl:onClass>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesObject"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Description"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="#Justification"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventInterpretationDescription -->
+
+    <owl:Class rdf:about="#EventInterpretationDescription">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Interpretant"/>
+                            <rdf:Description rdf:about="#RelevantSituation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#RelevantSituation"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Interpretant"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#EventInterpretationSituation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventInterpretationSituation -->
+
+    <owl:Class rdf:about="#EventInterpretationSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#EventInterpretationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesObject"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Situation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                                <owl:someValuesFrom rdf:resource="#RelevantSituation"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:onClass>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="#Interpretant"/>
+                    </owl:Restriction>
+                </owl:onClass>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventParticipationDescription -->
+
+    <owl:Class rdf:about="#EventParticipationDescription">
+        <rdfs:subClassOf rdf:resource="&DUL;Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#Participant"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:onClass rdf:resource="#DescribedEvent"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;defines"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#DescribedEvent"/>
+                            <rdf:Description rdf:about="#Participant"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isSatisfiedBy"/>
+                <owl:onClass rdf:resource="#EventParticipationSituation"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventParticipationSituation -->
+
+    <owl:Class rdf:about="#EventParticipationSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;satisfies"/>
+                <owl:onClass rdf:resource="#EventParticipationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesObject"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="#Participant"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;includesEvent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isClassifiedBy"/>
+                        <owl:someValuesFrom rdf:resource="#DescribedEvent"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#EventRole -->
+
+    <owl:Class rdf:about="#EventRole">
+        <owl:equivalentClass rdf:resource="&DUL;EventType"/>
+        <rdfs:subClassOf rdf:resource="&DUL;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Interpretant -->
+
+    <owl:Class rdf:about="#Interpretant">
+        <rdfs:subClassOf rdf:resource="#EventRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isEventIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventInterpretationSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventInterpretationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Justification -->
+
+    <owl:Class rdf:about="#Justification">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#EventCausalityDescription"/>
+                            <rdf:Description rdf:about="#EventCorrelationDescription"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isObjectIncludedIn"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#EventCausalitySituation"/>
+                                    <rdf:Description rdf:about="#EventCorrelationSituation"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#Participant -->
+
+    <owl:Class rdf:about="#Participant">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventParticipationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&DUL;isObjectIncludedIn"/>
+                        <owl:someValuesFrom rdf:resource="#EventParticipationSituation"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#RelevantCausality -->
+
+    <owl:Class rdf:about="#RelevantCausality">
+        <rdfs:subClassOf rdf:resource="#RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EventCausalitySituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#RelevantComposition -->
+
+    <owl:Class rdf:about="#RelevantComposition">
+        <rdfs:subClassOf rdf:resource="#RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EventCompositionSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#RelevantCorrelation -->
+
+    <owl:Class rdf:about="#RelevantCorrelation">
+        <rdfs:subClassOf rdf:resource="#RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EventCorrelationSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#RelevantParticipation -->
+
+    <owl:Class rdf:about="#RelevantParticipation">
+        <rdfs:subClassOf rdf:resource="#RelevantSituation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EventParticipationSituation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#RelevantSituation -->
+
+    <owl:Class rdf:about="#RelevantSituation">
+        <rdfs:subClassOf rdf:resource="&DUL;Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&DUL;Situation"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&DUL;isObjectIncludedIn"/>
+                                <owl:someValuesFrom rdf:resource="#EventInterpretationSituation"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isDefinedIn"/>
+                <owl:onClass rdf:resource="#EventInterpretationDescription"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#SaptioTemporalConstraint -->
+
+    <owl:Class rdf:about="#SaptioTemporalConstraint">
+        <rdfs:subClassOf rdf:resource="#EventCompositionConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;SpatioTemporalRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#SpatialConstraint -->
+
+    <owl:Class rdf:about="#SpatialConstraint">
+        <rdfs:subClassOf rdf:resource="#EventCompositionConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;SpaceRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://events.semantic-multimedia.org/ontology/2008/12/15/model.owl#TemporalConstraint -->
+
+    <owl:Class rdf:about="#TemporalConstraint">
+        <rdfs:subClassOf rdf:resource="#EventCompositionConstraint"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;parametrizes"/>
+                <owl:allValuesFrom rdf:resource="&DUL;TimeInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Concept -->
+
+    <owl:Class rdf:about="&DUL;Concept"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Description -->
+
+    <owl:Class rdf:about="&DUL;Description"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#EventType -->
+
+    <owl:Class rdf:about="&DUL;EventType"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Parameter -->
+
+    <owl:Class rdf:about="&DUL;Parameter"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Role -->
+
+    <owl:Class rdf:about="&DUL;Role"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="&DUL;Situation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#SpaceRegion -->
+
+    <owl:Class rdf:about="&DUL;SpaceRegion"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#SpatioTemporalRegion -->
+
+    <owl:Class rdf:about="&DUL;SpatioTemporalRegion"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#TimeInterval -->
+
+    <owl:Class rdf:about="&DUL;TimeInterval"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.941) http://owlapi.sourceforge.net -->
+

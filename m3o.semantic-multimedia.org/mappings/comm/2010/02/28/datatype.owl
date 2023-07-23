@@ -1,0 +1,2775 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY datatype "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#" >
+    <!ENTITY mediaRealization "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype;.owl#" >
+    <!ENTITY audioVisual "http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:mediaRealization="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype;.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:audioVisual="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/audioVisual.owl#"
+     xmlns:datatype="http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasBoolean -->
+
+    <owl:ObjectProperty rdf:about="#hasBoolean">
+        <rdfs:domain rdf:resource="#Boolean"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasDouble -->
+
+    <owl:ObjectProperty rdf:about="#hasDouble">
+        <rdfs:domain rdf:resource="#DoubleScalar"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasDuration -->
+
+    <owl:ObjectProperty rdf:about="#hasDuration">
+        <rdfs:domain rdf:resource="#BasicDuration"/>
+        <rdfs:range rdf:resource="&xsd;duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasFloat -->
+
+    <owl:ObjectProperty rdf:about="#hasFloat">
+        <rdfs:domain rdf:resource="#FloatScalar"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasInteger -->
+
+    <owl:ObjectProperty rdf:about="#hasInteger">
+        <rdfs:domain rdf:resource="#IntegerScalar"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasMatrix -->
+
+    <owl:ObjectProperty rdf:about="#hasMatrix">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The matrix is represented by a string. The first two numbers must be integers and identify the number of rows and collumns in this order. The following numbers are interpreted as floats and identify the data of the matrix. The numbers are serialized row by row. A 3D identity matrix
+1 0 0 
+0 1 0 
+0 0 1
+is represented as a string as follows: &quot;3 3 1 0 0 0 1 0 0 0 1&quot;. The matrix 
+1   2   3   4
+5   6   7   8
+9 10 11 12
+is represented as a string as follows: &quot;3 4 1 2 3 4 5 6 7 8 9 10 11 12&quot;.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Matrix"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasPolygon -->
+
+    <owl:ObjectProperty rdf:about="#hasPolygon">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A polygon is represented by a string which contains the dimension of the polygon points at the first position and the coordinates of the points subsequently. The 2D polygon with the 4 points (1,1) (3,4) (5,9) and (9,15) is represented by the following string: &quot;2 1 1 3 4 5 9 9 15&quot;.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Polygon"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasRectangle -->
+
+    <owl:ObjectProperty rdf:about="#hasRectangle">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A rectangle is represented by a string which describes its top left and bottom right point. The first number indicates the dimension of each point (usually 2 --&gt; 2D points on the image plane). The follwing numbers identify the float coordinates of the top left and the bottom right point. The 2D rectangle which is defined by the two points (5,6) and (10,12) is represented as &quot;2 5 6 10 12&quot;.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Rectangle"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasString -->
+
+    <owl:ObjectProperty rdf:about="#hasString">
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:domain rdf:resource="#String"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasTime -->
+
+    <owl:ObjectProperty rdf:about="#hasTime">
+        <rdfs:domain rdf:resource="#BasicTimePoint"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#hasVector -->
+
+    <owl:ObjectProperty rdf:about="#hasVector">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A vector is also represented by a string which contains all elements, e.g. the vector (1, 2, 3, 4, 5, 6, 7) is represented as &quot;1 2 3 4 5 6 7&quot;.</rdfs:comment>
+        <rdfs:domain rdf:resource="#Vector"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AbstractRegion -->
+
+    <owl:Class rdf:about="#AbstractRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Aggregation -->
+
+    <owl:Class rdf:about="#Aggregation">
+        <rdfs:subClassOf rdf:resource="#AggregationEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AggregationEnumeration -->
+
+    <owl:Class rdf:about="#AggregationEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AnchorFrameDistance -->
+
+    <owl:Class rdf:about="#AnchorFrameDistance">
+        <rdfs:subClassOf rdf:resource="#PositiveInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AnyUri -->
+
+    <owl:Class rdf:about="#AnyUri">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AsciiTextLength -->
+
+    <owl:Class rdf:about="#AsciiTextLength">
+        <rdfs:subClassOf rdf:resource="#PositiveInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AsciiTextOffset -->
+
+    <owl:Class rdf:about="#AsciiTextOffset">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioChannels -->
+
+    <owl:Class rdf:about="#AudioChannels">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioCodingFormat -->
+
+    <owl:Class rdf:about="#AudioCodingFormat">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioDefects -->
+
+    <owl:Class rdf:about="#AudioDefects">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AudioPresentation -->
+
+    <owl:Class rdf:about="#AudioPresentation">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Authority -->
+
+    <owl:Class rdf:about="#Authority">
+        <rdfs:subClassOf rdf:resource="#Nmtoken"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AverageBitrate -->
+
+    <owl:Class rdf:about="#AverageBitrate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AverageQuantizationScale -->
+
+    <owl:Class rdf:about="#AverageQuantizationScale">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#AverageTexture -->
+
+    <owl:Class rdf:about="#AverageTexture">
+        <rdfs:subClassOf rdf:resource="#Unsigned8"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Bandwidth -->
+
+    <owl:Class rdf:about="#Bandwidth">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Base64Binary -->
+
+    <owl:Class rdf:about="#Base64Binary">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BasicDuration -->
+
+    <owl:Class rdf:about="#BasicDuration">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BasicTimePoint -->
+
+    <owl:Class rdf:about="#BasicTimePoint">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BinCounts -->
+
+    <owl:Class rdf:about="#BinCounts">
+        <rdfs:subClassOf rdf:resource="#Unsigned3VectorDim80"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Bitrate -->
+
+    <owl:Class rdf:about="#Bitrate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BitsPerBin -->
+
+    <owl:Class rdf:about="#BitsPerBin">
+        <rdfs:subClassOf rdf:resource="#Unsigned4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BitsPerPixel -->
+
+    <owl:Class rdf:about="#BitsPerPixel">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BitsPerSample -->
+
+    <owl:Class rdf:about="#BitsPerSample">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Boolean -->
+
+    <owl:Class rdf:about="#Boolean">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#BoundingBox -->
+
+    <owl:Class rdf:about="#BoundingBox">
+        <rdfs:subClassOf rdf:resource="#Rectangle"/>
+        <rdfs:comment
+            >Corresponds to the &quot;Box&quot;Element of &quot;RegionLocatorType&quot; (see part 3, page 92 - 93)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CameraFollows -->
+
+    <owl:Class rdf:about="#CameraFollows">
+        <rdfs:subClassOf rdf:resource="#Boolean"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient14 -->
+
+    <owl:Class rdf:about="#CbacCoefficient14">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim14"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient2 -->
+
+    <owl:Class rdf:about="#CbacCoefficient2">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient20 -->
+
+    <owl:Class rdf:about="#CbacCoefficient20">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim20"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient27 -->
+
+    <owl:Class rdf:about="#CbacCoefficient27">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim27"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient5 -->
+
+    <owl:Class rdf:about="#CbacCoefficient5">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient63 -->
+
+    <owl:Class rdf:about="#CbacCoefficient63">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim63"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbacCoefficient9 -->
+
+    <owl:Class rdf:about="#CbacCoefficient9">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CbdcCoefficient -->
+
+    <owl:Class rdf:about="#CbdcCoefficient">
+        <rdfs:subClassOf rdf:resource="#Unsigned6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CharacterSetCode -->
+
+    <owl:Class rdf:about="#CharacterSetCode">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorComponent -->
+
+    <owl:Class rdf:about="#ColorComponent">
+        <rdfs:subClassOf rdf:resource="#ColorComponentEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorComponentEnumeration -->
+
+    <owl:Class rdf:about="#ColorComponentEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorDomain -->
+
+    <owl:Class rdf:about="#ColorDomain">
+        <rdfs:subClassOf rdf:resource="#ColorDomainUnion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorDomainUnion -->
+
+    <owl:Class rdf:about="#ColorDomainUnion">
+        <rdfs:subClassOf rdf:resource="#Union"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorIndex -->
+
+    <owl:Class rdf:about="#ColorIndex">
+        <rdfs:subClassOf rdf:resource="#Unsigned12VectorDim3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorPercentage -->
+
+    <owl:Class rdf:about="#ColorPercentage">
+        <rdfs:subClassOf rdf:resource="#Unsigned5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorQuantization -->
+
+    <owl:Class rdf:about="#ColorQuantization">
+        <rdfs:subClassOf rdf:resource="#Unsigned3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorReferenceFlag -->
+
+    <owl:Class rdf:about="#ColorReferenceFlag">
+        <rdfs:subClassOf rdf:resource="#Boolean"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSamplingComponent -->
+
+    <owl:Class rdf:about="#ColorSamplingComponent">
+        <rdfs:subClassOf rdf:resource="#TermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSpaceTransformationMatrix -->
+
+    <owl:Class rdf:about="#ColorSpaceTransformationMatrix">
+        <rdfs:subClassOf rdf:resource="#Unsigned16MatrixDim33"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSpaceType -->
+
+    <owl:Class rdf:about="#ColorSpaceType">
+        <rdfs:subClassOf rdf:resource="#ColorSpaceTypeEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorSpaceTypeEnumeration -->
+
+    <owl:Class rdf:about="#ColorSpaceTypeEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorStructureValues -->
+
+    <owl:Class rdf:about="#ColorStructureValues">
+        <rdfs:subClassOf rdf:resource="#Unsigned8VectorMaxDim256"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ColorVariance -->
+
+    <owl:Class rdf:about="#ColorVariance">
+        <rdfs:subClassOf rdf:resource="#Unsigned1VectorDim3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ControlledTermUseType -->
+
+    <owl:Class rdf:about="#ControlledTermUseType">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CountryCode -->
+
+    <owl:Class rdf:about="#CountryCode">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient14 -->
+
+    <owl:Class rdf:about="#CracCoefficient14">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim14"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient2 -->
+
+    <owl:Class rdf:about="#CracCoefficient2">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient20 -->
+
+    <owl:Class rdf:about="#CracCoefficient20">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim20"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient27 -->
+
+    <owl:Class rdf:about="#CracCoefficient27">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim27"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient5 -->
+
+    <owl:Class rdf:about="#CracCoefficient5">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient63 -->
+
+    <owl:Class rdf:about="#CracCoefficient63">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim63"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CracCoefficient9 -->
+
+    <owl:Class rdf:about="#CracCoefficient9">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CrdcCoefficient -->
+
+    <owl:Class rdf:about="#CrdcCoefficient">
+        <rdfs:subClassOf rdf:resource="#Unsigned6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#CurrencyCode -->
+
+    <owl:Class rdf:about="#CurrencyCode">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Difficulty -->
+
+    <owl:Class rdf:about="#Difficulty">
+        <rdfs:subClassOf rdf:resource="#ZeroToOne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#DominantDirection -->
+
+    <owl:Class rdf:about="#DominantDirection">
+        <rdfs:subClassOf rdf:resource="#Unsigned3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#DoubleDiagronalMatrix -->
+
+    <owl:Class rdf:about="#DoubleDiagronalMatrix">
+        <rdfs:subClassOf rdf:resource="#DoubleMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#DoubleMatrix -->
+
+    <owl:Class rdf:about="#DoubleMatrix">
+        <rdfs:subClassOf rdf:resource="#Matrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#DoubleScalar -->
+
+    <owl:Class rdf:about="#DoubleScalar">
+        <rdfs:subClassOf rdf:resource="#Scalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#DoubleVector -->
+
+    <owl:Class rdf:about="#DoubleVector">
+        <rdfs:subClassOf rdf:resource="#Vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Emphasis -->
+
+    <owl:Class rdf:about="#Emphasis">
+        <rdfs:subClassOf rdf:resource="#EmphasisUnion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#EmphasisUnion -->
+
+    <owl:Class rdf:about="#EmphasisUnion">
+        <rdfs:subClassOf rdf:resource="#Union"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Energy -->
+
+    <owl:Class rdf:about="#Energy">
+        <rdfs:subClassOf rdf:resource="#Unsigned8VectorDim30"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#EnergyDeviation -->
+
+    <owl:Class rdf:about="#EnergyDeviation">
+        <rdfs:subClassOf rdf:resource="#Unsigned8VectorDim30"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Enumeration -->
+
+    <owl:Class rdf:about="#Enumeration">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FigureTrajectoryType -->
+
+    <owl:Class rdf:about="#FigureTrajectoryType">
+        <rdfs:subClassOf rdf:resource="#FigureTrajectoryTypeEnumeration"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;Type&quot; attribute of the &quot;FigureTrajectoryType&quot; (part 3, page  99 - 100). the value is a sring of {ellipse rechtanlge polygon }</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FigureTrajectoryTypeEnumeration -->
+
+    <owl:Class rdf:about="#FigureTrajectoryTypeEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FileFormat -->
+
+    <owl:Class rdf:about="#FileFormat">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FileSize -->
+
+    <owl:Class rdf:about="#FileSize">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FloatDiagonalMatrix -->
+
+    <owl:Class rdf:about="#FloatDiagonalMatrix">
+        <rdfs:subClassOf rdf:resource="#FloatMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FloatMatrix -->
+
+    <owl:Class rdf:about="#FloatMatrix">
+        <rdfs:subClassOf rdf:resource="#Matrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FloatScalar -->
+
+    <owl:Class rdf:about="#FloatScalar">
+        <rdfs:subClassOf rdf:resource="#Scalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FloatVector -->
+
+    <owl:Class rdf:about="#FloatVector">
+        <rdfs:subClassOf rdf:resource="#Vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalBoomDown -->
+
+    <owl:Class rdf:about="#FractionalBoomDown">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalBoomUp -->
+
+    <owl:Class rdf:about="#FractionalBoomUp">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalDollyBackward -->
+
+    <owl:Class rdf:about="#FractionalDollyBackward">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalDollyForward -->
+
+    <owl:Class rdf:about="#FractionalDollyForward">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalFixed -->
+
+    <owl:Class rdf:about="#FractionalFixed">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalPanLeft -->
+
+    <owl:Class rdf:about="#FractionalPanLeft">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalPanRight -->
+
+    <owl:Class rdf:about="#FractionalPanRight">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalRollAntiClockwise -->
+
+    <owl:Class rdf:about="#FractionalRollAntiClockwise">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalRollClockwise -->
+
+    <owl:Class rdf:about="#FractionalRollClockwise">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTiltDown -->
+
+    <owl:Class rdf:about="#FractionalTiltDown">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTiltUp -->
+
+    <owl:Class rdf:about="#FractionalTiltUp">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTrackLeft -->
+
+    <owl:Class rdf:about="#FractionalTrackLeft">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalTrackRight -->
+
+    <owl:Class rdf:about="#FractionalTrackRight">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalZoomIn -->
+
+    <owl:Class rdf:about="#FractionalZoomIn">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FractionalZoomOut -->
+
+    <owl:Class rdf:about="#FractionalZoomOut">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameAspectRatio -->
+
+    <owl:Class rdf:about="#FrameAspectRatio">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameHeight -->
+
+    <owl:Class rdf:about="#FrameHeight">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameRate -->
+
+    <owl:Class rdf:about="#FrameRate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameStructure -->
+
+    <owl:Class rdf:about="#FrameStructure">
+        <rdfs:subClassOf rdf:resource="#FrameStructureUnion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameStructureUnion -->
+
+    <owl:Class rdf:about="#FrameStructureUnion">
+        <rdfs:subClassOf rdf:resource="#Union"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrameWidth -->
+
+    <owl:Class rdf:about="#FrameWidth">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#FrontChannels -->
+
+    <owl:Class rdf:about="#FrontChannels">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#GlobalCurvature -->
+
+    <owl:Class rdf:about="#GlobalCurvature">
+        <rdfs:subClassOf rdf:resource="#Unsigned6VectorDim2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#GraphicsCodingFormat -->
+
+    <owl:Class rdf:about="#GraphicsCodingFormat">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HexBinary -->
+
+    <owl:Class rdf:about="#HexBinary">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HighestPeakY -->
+
+    <owl:Class rdf:about="#HighestPeakY">
+        <rdfs:subClassOf rdf:resource="#Unsigned7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HorizontalOffset -->
+
+    <owl:Class rdf:about="#HorizontalOffset">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HorizontalPeriod -->
+
+    <owl:Class rdf:about="#HorizontalPeriod">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#HorzontalPosition -->
+
+    <owl:Class rdf:about="#HorzontalPosition">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Importance -->
+
+    <owl:Class rdf:about="#Importance">
+        <rdfs:subClassOf rdf:resource="#ZeroToOne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#InlineMediaDescriptorType -->
+
+    <owl:Class rdf:about="#InlineMediaDescriptorType">
+        <rdfs:subClassOf rdf:resource="#MimeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#IntegerDiagonalMatrix -->
+
+    <owl:Class rdf:about="#IntegerDiagonalMatrix">
+        <rdfs:subClassOf rdf:resource="#IntegerMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#IntegerMatrix -->
+
+    <owl:Class rdf:about="#IntegerMatrix">
+        <rdfs:subClassOf rdf:resource="#Matrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#IntegerScalar -->
+
+    <owl:Class rdf:about="#IntegerScalar">
+        <rdfs:subClassOf rdf:resource="#Scalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#IntegerVector -->
+
+    <owl:Class rdf:about="#IntegerVector">
+        <rdfs:subClassOf rdf:resource="#Vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Intensity -->
+
+    <owl:Class rdf:about="#Intensity">
+        <rdfs:subClassOf rdf:resource="#Unsigned3Dim5"/>
+        <rdfs:subClassOf rdf:resource="#ZeroToOne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#IntraFrameDistance -->
+
+    <owl:Class rdf:about="#IntraFrameDistance">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#KeyMediaTimePoint -->
+
+    <owl:Class rdf:about="#KeyMediaTimePoint">
+        <rdfs:subClassOf rdf:resource="#BasicTimePoint"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;MediaTimePoint&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  2425)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#KeyValue -->
+
+    <owl:Class rdf:about="#KeyValue">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;KeyValue&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  2425)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#KeyValueParameter -->
+
+    <owl:Class rdf:about="#KeyValueParameter">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;Param&quot; attribute of the &quot;TemporalInterpolationType&quot; (part 3, page  2425)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#KeyValueType -->
+
+    <owl:Class rdf:about="#KeyValueType">
+        <rdfs:subClassOf rdf:resource="#KeyValueTypeEnumeration"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;Type&quot; attribute of the &quot;TemporalInterpolationType&quot; (part 3, page  2425). The value is a string of {startPoint firstPoint notDetermined secondOrder}.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#KeyValueTypeEnumeration -->
+
+    <owl:Class rdf:about="#KeyValueTypeEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#LatticeHeight -->
+
+    <owl:Class rdf:about="#LatticeHeight">
+        <rdfs:subClassOf rdf:resource="#PositiveInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#LatticeWidth -->
+
+    <owl:Class rdf:about="#LatticeWidth">
+        <rdfs:subClassOf rdf:resource="#PositiveInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#LfeChannels -->
+
+    <owl:Class rdf:about="#LfeChannels">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MagnitudeOfArt -->
+
+    <owl:Class rdf:about="#MagnitudeOfArt">
+        <rdfs:subClassOf rdf:resource="#Unsigned4VectorDim35"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Matrix -->
+
+    <owl:Class rdf:about="#Matrix">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MaximumBitrate -->
+
+    <owl:Class rdf:about="#MaximumBitrate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaContent -->
+
+    <owl:Class rdf:about="#MediaContent">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaData16 -->
+
+    <owl:Class rdf:about="#MediaData16">
+        <rdfs:subClassOf rdf:resource="#HexBinary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaData64 -->
+
+    <owl:Class rdf:about="#MediaData64">
+        <rdfs:subClassOf rdf:resource="#Base64Binary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaDuration -->
+
+    <owl:Class rdf:about="#MediaDuration">
+        <rdfs:subClassOf rdf:resource="#BasicDuration"/>
+        <rdfs:comment
+            >Corresponds to the &quot;MediaDuration&quot;Element of the &quot;MediaTimeType&quot; (see part 5, page 86)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaTimePoint -->
+
+    <owl:Class rdf:about="#MediaTimePoint">
+        <rdfs:subClassOf rdf:resource="#BasicTimePoint"/>
+        <rdfs:comment
+            >Corresponds to the &quot;MediaTimePoint&quot;Element of the &quot;MediaTimeType&quot; (see part 5, page 86)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MediaUri -->
+
+    <owl:Class rdf:about="#MediaUri">
+        <rdfs:subClassOf rdf:resource="#AnyUri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Medium -->
+
+    <owl:Class rdf:about="#Medium">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MimeType -->
+
+    <owl:Class rdf:about="#MimeType">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MinimumBitrate -->
+
+    <owl:Class rdf:about="#MinimumBitrate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MinusOneToOne -->
+
+    <owl:Class rdf:about="#MinusOneToOne">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MinusOneToOneMatrix -->
+
+    <owl:Class rdf:about="#MinusOneToOneMatrix">
+        <rdfs:subClassOf rdf:resource="#FloatMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MinusOneToOneVector -->
+
+    <owl:Class rdf:about="#MinusOneToOneVector">
+        <rdfs:subClassOf rdf:resource="#FloatVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountBoomDown -->
+
+    <owl:Class rdf:about="#MixtureAmountBoomDown">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountBoomUp -->
+
+    <owl:Class rdf:about="#MixtureAmountBoomUp">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountDollyBackward -->
+
+    <owl:Class rdf:about="#MixtureAmountDollyBackward">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountDollyForward -->
+
+    <owl:Class rdf:about="#MixtureAmountDollyForward">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountPanLeft -->
+
+    <owl:Class rdf:about="#MixtureAmountPanLeft">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountPanRight -->
+
+    <owl:Class rdf:about="#MixtureAmountPanRight">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountRollAntiClockwise -->
+
+    <owl:Class rdf:about="#MixtureAmountRollAntiClockwise">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountRollClockwise -->
+
+    <owl:Class rdf:about="#MixtureAmountRollClockwise">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTiltDown -->
+
+    <owl:Class rdf:about="#MixtureAmountTiltDown">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTiltUp -->
+
+    <owl:Class rdf:about="#MixtureAmountTiltUp">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTrackLeft -->
+
+    <owl:Class rdf:about="#MixtureAmountTrackLeft">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountTrackRight -->
+
+    <owl:Class rdf:about="#MixtureAmountTrackRight">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountZoomIn -->
+
+    <owl:Class rdf:about="#MixtureAmountZoomIn">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MixtureAmountZoomOut -->
+
+    <owl:Class rdf:about="#MixtureAmountZoomOut">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeXLeft -->
+
+    <owl:Class rdf:about="#MotionRangeXLeft">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeXRight -->
+
+    <owl:Class rdf:about="#MotionRangeXRight">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeYDown -->
+
+    <owl:Class rdf:about="#MotionRangeYDown">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#MotionRangeYUp -->
+
+    <owl:Class rdf:about="#MotionRangeYUp">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Nmtoken -->
+
+    <owl:Class rdf:about="#Nmtoken">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountBoomDown -->
+
+    <owl:Class rdf:about="#NonMixtureAmountBoomDown">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountBoomUp -->
+
+    <owl:Class rdf:about="#NonMixtureAmountBoomUp">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountDollyBackward -->
+
+    <owl:Class rdf:about="#NonMixtureAmountDollyBackward">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountDollyForward -->
+
+    <owl:Class rdf:about="#NonMixtureAmountDollyForward">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountFixed -->
+
+    <owl:Class rdf:about="#NonMixtureAmountFixed">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountPanLeft -->
+
+    <owl:Class rdf:about="#NonMixtureAmountPanLeft">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountPanRight -->
+
+    <owl:Class rdf:about="#NonMixtureAmountPanRight">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountRollAntiClockwise -->
+
+    <owl:Class rdf:about="#NonMixtureAmountRollAntiClockwise">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountRollClockwise -->
+
+    <owl:Class rdf:about="#NonMixtureAmountRollClockwise">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTiltDown -->
+
+    <owl:Class rdf:about="#NonMixtureAmountTiltDown">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTiltUp -->
+
+    <owl:Class rdf:about="#NonMixtureAmountTiltUp">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTrackLeft -->
+
+    <owl:Class rdf:about="#NonMixtureAmountTrackLeft">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountTrackRight -->
+
+    <owl:Class rdf:about="#NonMixtureAmountTrackRight">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountZoomIn -->
+
+    <owl:Class rdf:about="#NonMixtureAmountZoomIn">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonMixtureAmountZoomOut -->
+
+    <owl:Class rdf:about="#NonMixtureAmountZoomOut">
+        <rdfs:subClassOf rdf:resource="#Unsigned11"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonNegativeInteger -->
+
+    <owl:Class rdf:about="#NonNegativeInteger">
+        <rdfs:subClassOf rdf:resource="#IntegerScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NonNegativeReal -->
+
+    <owl:Class rdf:about="#NonNegativeReal">
+        <rdfs:subClassOf rdf:resource="#DoubleScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfBinsPerComponent -->
+
+    <owl:Class rdf:about="#NumberOfBinsPerComponent">
+        <rdfs:subClassOf rdf:resource="#Unsigned12"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfBitplanesDiscarded -->
+
+    <owl:Class rdf:about="#NumberOfBitplanesDiscarded">
+        <rdfs:subClassOf rdf:resource="#NumberOfBitplanesDiscardedEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfBitplanesDiscardedEnumeration -->
+
+    <owl:Class rdf:about="#NumberOfBitplanesDiscardedEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfCoefficents -->
+
+    <owl:Class rdf:about="#NumberOfCoefficents">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfCoefficentsEnumeration -->
+
+    <owl:Class rdf:about="#NumberOfCoefficentsEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfLongRuns -->
+
+    <owl:Class rdf:about="#NumberOfLongRuns">
+        <rdfs:subClassOf rdf:resource="#Unsigned5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfMediumRuns -->
+
+    <owl:Class rdf:about="#NumberOfMediumRuns">
+        <rdfs:subClassOf rdf:resource="#Unsigned5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfNonTranscodingPerBlocks -->
+
+    <owl:Class rdf:about="#NumberOfNonTranscodingPerBlocks">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfShortRuns -->
+
+    <owl:Class rdf:about="#NumberOfShortRuns">
+        <rdfs:subClassOf rdf:resource="#Unsigned5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#NumberOfTracks -->
+
+    <owl:Class rdf:about="#NumberOfTracks">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Organization -->
+
+    <owl:Class rdf:about="#Organization">
+        <rdfs:subClassOf rdf:resource="#Nmtoken"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#OriginX -->
+
+    <owl:Class rdf:about="#OriginX">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#OriginY -->
+
+    <owl:Class rdf:about="#OriginY">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#OtherCodingFormat -->
+
+    <owl:Class rdf:about="#OtherCodingFormat">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParameterTraejctoryMotionModel -->
+
+    <owl:Class rdf:about="#ParameterTraejctoryMotionModel">
+        <rdfs:subClassOf rdf:resource="#ParameterTrajectoryMotionModelEnumeration"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;MotionModel&quot; attribute of the &quot;ParameterTrajectoryType&quot; (part 3, page  101 - 102). The value is a string of {still affine parabolic perspective translation rotationAndScaling }.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParameterTrajectoryEllipseFlag -->
+
+    <owl:Class rdf:about="#ParameterTrajectoryEllipseFlag">
+        <rdfs:subClassOf rdf:resource="#Boolean"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;EllipseFlag&quot; attribute of the &quot;ParameterTrajectoryType&quot; (part 3, page  101 - 102)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParameterTrajectoryMotionModelEnumeration -->
+
+    <owl:Class rdf:about="#ParameterTrajectoryMotionModelEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParametersVectorMaxDim12 -->
+
+    <owl:Class rdf:about="#ParametersVectorMaxDim12">
+        <rdfs:subClassOf rdf:resource="#FloatVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParametricMotionMediaDuration -->
+
+    <owl:Class rdf:about="#ParametricMotionMediaDuration">
+        <rdfs:subClassOf rdf:resource="#BasicDuration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParametricMotionModel -->
+
+    <owl:Class rdf:about="#ParametricMotionModel">
+        <rdfs:subClassOf rdf:resource="#ParametricMotionModelEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParametricMotionModelEnumeration -->
+
+    <owl:Class rdf:about="#ParametricMotionModelEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ParametricMotionParameters -->
+
+    <owl:Class rdf:about="#ParametricMotionParameters">
+        <rdfs:subClassOf rdf:resource="#ParametersVectorMaxDim12"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PeakX -->
+
+    <owl:Class rdf:about="#PeakX">
+        <rdfs:subClassOf rdf:resource="#Unsigned6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PeakY -->
+
+    <owl:Class rdf:about="#PeakY">
+        <rdfs:subClassOf rdf:resource="#Unsigned3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PixelAspectRatio -->
+
+    <owl:Class rdf:about="#PixelAspectRatio">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PixelResolution -->
+
+    <owl:Class rdf:about="#PixelResolution">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PlanarSurfaces -->
+
+    <owl:Class rdf:about="#PlanarSurfaces">
+        <rdfs:subClassOf rdf:resource="#Unsigned12"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Polygon -->
+
+    <owl:Class rdf:about="#Polygon">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PositionalOrder -->
+
+    <owl:Class rdf:about="#PositionalOrder">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PositiveInteger -->
+
+    <owl:Class rdf:about="#PositiveInteger">
+        <rdfs:subClassOf rdf:resource="#IntegerScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ProbabilityMatrix -->
+
+    <owl:Class rdf:about="#ProbabilityMatrix">
+        <rdfs:subClassOf rdf:resource="#FloatMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ProbabilityVector -->
+
+    <owl:Class rdf:about="#ProbabilityVector">
+        <rdfs:subClassOf rdf:resource="#FloatVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#PrototypeCurvature -->
+
+    <owl:Class rdf:about="#PrototypeCurvature">
+        <rdfs:subClassOf rdf:resource="#Unsigned6VectorDim2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#QualityRatingType -->
+
+    <owl:Class rdf:about="#QualityRatingType">
+        <rdfs:subClassOf rdf:resource="#QualityRatingTypeEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#QualityRatingTypeEnumeration -->
+
+    <owl:Class rdf:about="#QualityRatingTypeEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingScheme -->
+
+    <owl:Class rdf:about="#RatingScheme">
+        <rdfs:subClassOf rdf:resource="#TermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeBest -->
+
+    <owl:Class rdf:about="#RatingSchemeBest">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeStyle -->
+
+    <owl:Class rdf:about="#RatingSchemeStyle">
+        <rdfs:subClassOf rdf:resource="#RatingSchemeStyleEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeStyleEnumeration -->
+
+    <owl:Class rdf:about="#RatingSchemeStyleEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingSchemeWorst -->
+
+    <owl:Class rdf:about="#RatingSchemeWorst">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RatingValue -->
+
+    <owl:Class rdf:about="#RatingValue">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RearChannels -->
+
+    <owl:Class rdf:about="#RearChannels">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Rectangle -->
+
+    <owl:Class rdf:about="#Rectangle">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RegionBoundary -->
+
+    <owl:Class rdf:about="#RegionBoundary">
+        <rdfs:subClassOf rdf:resource="#Polygon"/>
+        <rdfs:comment
+            >Corresponds to &quot;Polygon&quot;Element of &quot;RegionLocatorType&quot; (see part 3, page 92 - 93)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#RegionCode -->
+
+    <owl:Class rdf:about="#RegionCode">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SampleRate -->
+
+    <owl:Class rdf:about="#SampleRate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ScalableCoding -->
+
+    <owl:Class rdf:about="#ScalableCoding">
+        <rdfs:subClassOf rdf:resource="#ScalableCodingUnion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ScalableCodingUnion -->
+
+    <owl:Class rdf:about="#ScalableCodingUnion">
+        <rdfs:subClassOf rdf:resource="#Union"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ScalableColorCoefficients -->
+
+    <owl:Class rdf:about="#ScalableColorCoefficients">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Scalar -->
+
+    <owl:Class rdf:about="#Scalar">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SceneCodingFormat -->
+
+    <owl:Class rdf:about="#SceneCodingFormat">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ShapeChange -->
+
+    <owl:Class rdf:about="#ShapeChange">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SideChannels -->
+
+    <owl:Class rdf:about="#SideChannels">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SingularSurfaces -->
+
+    <owl:Class rdf:about="#SingularSurfaces">
+        <rdfs:subClassOf rdf:resource="#Unsigned12"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SpatialCoherency -->
+
+    <owl:Class rdf:about="#SpatialCoherency">
+        <rdfs:subClassOf rdf:resource="#Unsigned5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#SpatialResolutionHint -->
+
+    <owl:Class rdf:about="#SpatialResolutionHint">
+        <rdfs:subClassOf rdf:resource="#ZeroToOne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Spectrum -->
+
+    <owl:Class rdf:about="#Spectrum">
+        <rdfs:subClassOf rdf:resource="#Unsigned12VectorMaxDim255"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#StandardDeviation -->
+
+    <owl:Class rdf:about="#StandardDeviation">
+        <rdfs:subClassOf rdf:resource="#Unsigned8"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#StreamId -->
+
+    <owl:Class rdf:about="#StreamId">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#String -->
+
+    <owl:Class rdf:about="#String">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#System -->
+
+    <owl:Class rdf:about="#System">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TargetChannelBitRate -->
+
+    <owl:Class rdf:about="#TargetChannelBitRate">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TemporalOrder -->
+
+    <owl:Class rdf:about="#TemporalOrder">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TermUseType -->
+
+    <owl:Class rdf:about="#TermUseType">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingDirection -->
+
+    <owl:Class rdf:about="#TextureBrowsingDirection">
+        <rdfs:subClassOf rdf:resource="#TextureBrowsingDirectionEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingDirectionEnumeration -->
+
+    <owl:Class rdf:about="#TextureBrowsingDirectionEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingRegularity -->
+
+    <owl:Class rdf:about="#TextureBrowsingRegularity">
+        <rdfs:subClassOf rdf:resource="#TextureBrowsingRegularityEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingRegularityEnumeration -->
+
+    <owl:Class rdf:about="#TextureBrowsingRegularityEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingScale -->
+
+    <owl:Class rdf:about="#TextureBrowsingScale">
+        <rdfs:subClassOf rdf:resource="#TextureBrowsingScaleEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TextureBrowsingScaleEnumeration -->
+
+    <owl:Class rdf:about="#TextureBrowsingScaleEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryCoordinateDefinitionUnits -->
+
+    <owl:Class rdf:about="#TrajectoryCoordinateDefinitionUnits">
+        <rdfs:subClassOf rdf:resource="#TrajectoryCoordinateDefinitionUnitsEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryCoordinateDefinitionUnitsEnumeration -->
+
+    <owl:Class rdf:about="#TrajectoryCoordinateDefinitionUnitsEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryX -->
+
+    <owl:Class rdf:about="#TrajectoryX">
+        <rdfs:subClassOf rdf:resource="#Unsigned8"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#TrajectoryY -->
+
+    <owl:Class rdf:about="#TrajectoryY">
+        <rdfs:subClassOf rdf:resource="#Unsigned8"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Uncompensability -->
+
+    <owl:Class rdf:about="#Uncompensability">
+        <rdfs:subClassOf rdf:resource="#ZeroToOne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Union -->
+
+    <owl:Class rdf:about="#Union">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdDescriptorType -->
+
+    <owl:Class rdf:about="#UniqueIdDescriptorType">
+        <rdfs:subClassOf rdf:resource="#Nmtoken"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdEncoding -->
+
+    <owl:Class rdf:about="#UniqueIdEncoding">
+        <rdfs:subClassOf rdf:resource="#UniqueIdEncodingEnumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdEncodingEnumeration -->
+
+    <owl:Class rdf:about="#UniqueIdEncodingEnumeration">
+        <rdfs:subClassOf rdf:resource="#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#UniqueIdString -->
+
+    <owl:Class rdf:about="#UniqueIdString">
+        <rdfs:subClassOf rdf:resource="#String"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned1 -->
+
+    <owl:Class rdf:about="#Unsigned1">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned10 -->
+
+    <owl:Class rdf:about="#Unsigned10">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned11 -->
+
+    <owl:Class rdf:about="#Unsigned11">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned12 -->
+
+    <owl:Class rdf:about="#Unsigned12">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned12VectorDim3 -->
+
+    <owl:Class rdf:about="#Unsigned12VectorDim3">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned12VectorMaxDim255 -->
+
+    <owl:Class rdf:about="#Unsigned12VectorMaxDim255">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned12VectorMaxDim256 -->
+
+    <owl:Class rdf:about="#Unsigned12VectorMaxDim256">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned13 -->
+
+    <owl:Class rdf:about="#Unsigned13">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned14 -->
+
+    <owl:Class rdf:about="#Unsigned14">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned15 -->
+
+    <owl:Class rdf:about="#Unsigned15">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned16 -->
+
+    <owl:Class rdf:about="#Unsigned16">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned16MatrixDim33 -->
+
+    <owl:Class rdf:about="#Unsigned16MatrixDim33">
+        <rdfs:subClassOf rdf:resource="#IntegerMatrix"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned1VectorDim3 -->
+
+    <owl:Class rdf:about="#Unsigned1VectorDim3">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned2 -->
+
+    <owl:Class rdf:about="#Unsigned2">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3 -->
+
+    <owl:Class rdf:about="#Unsigned3">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned32 -->
+
+    <owl:Class rdf:about="#Unsigned32">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3Dim5 -->
+
+    <owl:Class rdf:about="#Unsigned3Dim5">
+        <rdfs:subClassOf rdf:resource="#PositiveInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3VectorDim16 -->
+
+    <owl:Class rdf:about="#Unsigned3VectorDim16">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3VectorDim256 -->
+
+    <owl:Class rdf:about="#Unsigned3VectorDim256">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3VectorDim4 -->
+
+    <owl:Class rdf:about="#Unsigned3VectorDim4">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3VectorDim64 -->
+
+    <owl:Class rdf:about="#Unsigned3VectorDim64">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned3VectorDim80 -->
+
+    <owl:Class rdf:about="#Unsigned3VectorDim80">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned4 -->
+
+    <owl:Class rdf:about="#Unsigned4">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned4VectorDim35 -->
+
+    <owl:Class rdf:about="#Unsigned4VectorDim35">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5 -->
+
+    <owl:Class rdf:about="#Unsigned5">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim14 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim14">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim2 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim2">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim20 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim20">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim27 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim27">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim5 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim5">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim63 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim63">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned5VectorDim9 -->
+
+    <owl:Class rdf:about="#Unsigned5VectorDim9">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned6 -->
+
+    <owl:Class rdf:about="#Unsigned6">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned6VectorDim2 -->
+
+    <owl:Class rdf:about="#Unsigned6VectorDim2">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned7 -->
+
+    <owl:Class rdf:about="#Unsigned7">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned8 -->
+
+    <owl:Class rdf:about="#Unsigned8">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned8VectorDim30 -->
+
+    <owl:Class rdf:about="#Unsigned8VectorDim30">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned8VectorMaxDim256 -->
+
+    <owl:Class rdf:about="#Unsigned8VectorMaxDim256">
+        <rdfs:subClassOf rdf:resource="#IntegerVector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Unsigned9 -->
+
+    <owl:Class rdf:about="#Unsigned9">
+        <rdfs:subClassOf rdf:resource="#NonNegativeInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VariableBitrate -->
+
+    <owl:Class rdf:about="#VariableBitrate">
+        <rdfs:subClassOf rdf:resource="#Boolean"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector -->
+
+    <owl:Class rdf:about="#Vector">
+        <rdfs:subClassOf rdf:resource="#AbstractRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector16 -->
+
+    <owl:Class rdf:about="#Vector16">
+        <rdfs:subClassOf rdf:resource="#Unsigned3VectorDim16"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector256 -->
+
+    <owl:Class rdf:about="#Vector256">
+        <rdfs:subClassOf rdf:resource="#Unsigned3VectorDim256"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector4 -->
+
+    <owl:Class rdf:about="#Vector4">
+        <rdfs:subClassOf rdf:resource="#Unsigned3VectorDim4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#Vector64 -->
+
+    <owl:Class rdf:about="#Vector64">
+        <rdfs:subClassOf rdf:resource="#Unsigned3VectorDim64"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VerticalOffset -->
+
+    <owl:Class rdf:about="#VerticalOffset">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VerticalPeriod -->
+
+    <owl:Class rdf:about="#VerticalPeriod">
+        <rdfs:subClassOf rdf:resource="#NonNegativeReal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VerticalPostition -->
+
+    <owl:Class rdf:about="#VerticalPostition">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VideoDefects -->
+
+    <owl:Class rdf:about="#VideoDefects">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#VisualCodingFormat -->
+
+    <owl:Class rdf:about="#VisualCodingFormat">
+        <rdfs:subClassOf rdf:resource="#ControlledTermUseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#WholeIntervalMediaDuration -->
+
+    <owl:Class rdf:about="#WholeIntervalMediaDuration">
+        <rdfs:subClassOf rdf:resource="#BasicDuration"/>
+        <rdfs:comment
+            >Corrresponds to the &quot;MediaDuration&quot; element of the &quot;TemporalInterpolationType&quot; (part 3, page  2425)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient14 -->
+
+    <owl:Class rdf:about="#YacCoefficient14">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim14"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient2 -->
+
+    <owl:Class rdf:about="#YacCoefficient2">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient20 -->
+
+    <owl:Class rdf:about="#YacCoefficient20">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim20"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient27 -->
+
+    <owl:Class rdf:about="#YacCoefficient27">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim27"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient5 -->
+
+    <owl:Class rdf:about="#YacCoefficient5">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient63 -->
+
+    <owl:Class rdf:about="#YacCoefficient63">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim63"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YacCoefficient9 -->
+
+    <owl:Class rdf:about="#YacCoefficient9">
+        <rdfs:subClassOf rdf:resource="#Unsigned5VectorDim9"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#YdcCoefficient -->
+
+    <owl:Class rdf:about="#YdcCoefficient">
+        <rdfs:subClassOf rdf:resource="#Unsigned6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/comm/2010/02/28/datatype.owl#ZeroToOne -->
+
+    <owl:Class rdf:about="#ZeroToOne">
+        <rdfs:subClassOf rdf:resource="#FloatScalar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="&DUL;Region"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#boolean -->
+
+    <owl:Class rdf:about="&xsd;boolean"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <owl:Class rdf:about="&xsd;dateTime"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#double -->
+
+    <owl:Class rdf:about="&xsd;double"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+    <owl:Class rdf:about="&xsd;duration"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#float -->
+
+    <owl:Class rdf:about="&xsd;float"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <owl:Class rdf:about="&xsd;integer"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <owl:Class rdf:about="&xsd;string"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

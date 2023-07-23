@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY searchmonkey-media "http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#" >
+    <!ENTITY searchmonkey-media-photorealizationcollection-example "http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#" >
+    <!ENTITY searchmonkey-media-photorealizationcollection "http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:searchmonkey-media-photorealizationcollection="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#"
+     xmlns:searchmonkey-media-photorealizationcollection-example="http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:searchmonkey-media="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#defines -->
+
+    <owl:ObjectProperty rdf:about="&DUL;defines"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#PhotoRealizationCollection -->
+
+    <owl:Class rdf:about="&searchmonkey-media-photorealizationcollection;PhotoRealizationCollection"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#PhotoRealizationCollectionConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media-photorealizationcollection;PhotoRealizationCollectionConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#PhotoRealizationCollectionPattern -->
+
+    <owl:Class rdf:about="&searchmonkey-media-photorealizationcollection;PhotoRealizationCollectionPattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#PhotoRealizationCollectionSituation -->
+
+    <owl:Class rdf:about="&searchmonkey-media-photorealizationcollection;PhotoRealizationCollectionSituation"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media-photorealizationcollection.owl#PhotoRealizationElementConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media-photorealizationcollection;PhotoRealizationElementConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#PhotoRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;PhotoRealization"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#pr-1 -->
+
+    <owl:Thing rdf:about="#pr-1">
+        <rdf:type rdf:resource="&searchmonkey-media;PhotoRealization"/>
+        <DUL:hasSetting rdf:resource="#prcs-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#pr-n -->
+
+    <searchmonkey-media:PhotoRealization rdf:about="#pr-n">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasSetting rdf:resource="#prcs-1"/>
+    </searchmonkey-media:PhotoRealization>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#prc-1 -->
+
+    <searchmonkey-media-photorealizationcollection:PhotoRealizationCollection rdf:about="#prc-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasSetting rdf:resource="#prcs-1"/>
+    </searchmonkey-media-photorealizationcollection:PhotoRealizationCollection>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#prcc-1 -->
+
+    <searchmonkey-media-photorealizationcollection:PhotoRealizationCollectionConcept rdf:about="#prcc-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:classifies rdf:resource="#prc-1"/>
+    </searchmonkey-media-photorealizationcollection:PhotoRealizationCollectionConcept>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#prcp-1 -->
+
+    <owl:Thing rdf:about="#prcp-1">
+        <rdf:type rdf:resource="&searchmonkey-media-photorealizationcollection;PhotoRealizationCollectionPattern"/>
+        <DUL:defines rdf:resource="#prcc-1"/>
+        <DUL:defines rdf:resource="#prec-1"/>
+        <DUL:defines rdf:resource="#prec-n"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#prcs-1 -->
+
+    <searchmonkey-media-photorealizationcollection:PhotoRealizationCollectionSituation rdf:about="#prcs-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:satisfies rdf:resource="#prcp-1"/>
+    </searchmonkey-media-photorealizationcollection:PhotoRealizationCollectionSituation>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#prec-1 -->
+
+    <searchmonkey-media-photorealizationcollection:PhotoRealizationElementConcept rdf:about="#prec-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:classifies rdf:resource="#pr-1"/>
+    </searchmonkey-media-photorealizationcollection:PhotoRealizationElementConcept>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/searchmonkey-media-photorealizationcollection-example.owl#prec-n -->
+
+    <owl:Thing rdf:about="#prec-n">
+        <rdf:type rdf:resource="&searchmonkey-media-photorealizationcollection;PhotoRealizationElementConcept"/>
+        <DUL:classifies rdf:resource="#pr-n"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

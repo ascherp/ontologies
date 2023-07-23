@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY m3o "http://m3o.semantic-multimedia.org/" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY examples "http://m3o.semantic-multimedia.org/examples#" >
+]>
+
+
+<rdf:RDF xmlns="&m3o;examples#"
+     xml:base="&m3o;examples"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:m3o="http://m3o.semantic-multimedia.org/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:examples="&m3o;examples#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasQuality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasRegion"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#base -->
+
+    <owl:ObjectProperty rdf:about="&xsd;base"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/base -->
+
+    <owl:DatatypeProperty rdf:about="&m3o;base"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/hasBrightnessValue -->
+
+    <owl:DatatypeProperty rdf:about="&m3o;hasBrightnessValue">
+        <rdfs:domain rdf:resource="&m3o;EXIFBrightnessRegion"/>
+        <rdfs:range rdf:resource="#genid1"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegionDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegionDataValue -->
+
+    <owl:DatatypeProperty rdf:about="&DUL;hasRegionDataValue"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#maxInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&xsd;maxInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#minInclusive -->
+
+    <owl:DatatypeProperty rdf:about="&xsd;minInclusive"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/EXIFBrightnessQuality -->
+
+    <owl:Class rdf:about="&m3o;EXIFBrightnessQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/EXIFBrightnessRegion -->
+
+    <owl:Class rdf:about="&m3o;EXIFBrightnessRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/Image -->
+
+    <owl:Class rdf:about="&m3o;Image">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="&DUL;InformationObject"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="&DUL;Quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="&DUL;Region"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#restriction -->
+
+    <owl:Class rdf:about="&xsd;restriction"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#bq-1 -->
+
+    <owl:Thing rdf:about="#bq-1">
+        <rdf:type rdf:resource="&m3o;EXIFBrightnessQuality"/>
+        <DUL:hasRegion rdf:resource="#br-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#br-1 -->
+
+    <owl:Thing rdf:about="#br-1">
+        <rdf:type rdf:resource="&m3o;EXIFBrightnessRegion"/>
+        <m3o:hasBrightnessValue rdf:datatype="&m3o;examples#genid1">45.12</m3o:hasBrightnessValue>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#genid1 -->
+
+    <owl:Thing rdf:about="#genid1">
+        <rdf:type rdf:resource="&xsd;restriction"/>
+        <xsd:maxInclusive>99.99</xsd:maxInclusive>
+        <xsd:minInclusive>-99.99</xsd:minInclusive>
+        <xsd:base rdf:resource="&xsd;float"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples#image-1 -->
+
+    <owl:Thing rdf:about="#image-1">
+        <rdf:type rdf:resource="&m3o;Image"/>
+        <DUL:hasQuality rdf:resource="#bq-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#float -->
+
+    <owl:Thing rdf:about="&xsd;float"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY id3-example "http://m3o.semantic-multimedia.org/examples/id3-example.owl#" >
+    <!ENTITY id3 "http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/examples/id3-example.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/examples/id3-example.owl"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:id3-example="http://m3o.semantic-multimedia.org/examples/id3-example.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:id3="http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasPart"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasQuality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasRegion"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasSetting"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isObjectIncludedIn -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isObjectIncludedIn"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#parametrizes -->
+
+    <owl:ObjectProperty rdf:about="&DUL;parametrizes"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#satisfies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;satisfies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="&DUL;hasDataValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ID3AnnotationPattern -->
+
+    <owl:Class rdf:about="#ID3AnnotationPattern">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ID3AnnotationSituation -->
+
+    <owl:Class rdf:about="#ID3AnnotationSituation">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationSituation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#ArtistConcept -->
+
+    <owl:Class rdf:about="&id3;ArtistConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#ArtistRegion -->
+
+    <owl:Class rdf:about="&id3;ArtistRegion"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#AudioObject -->
+
+    <owl:Class rdf:about="&id3;AudioObject"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#OriginalRecordingConcept -->
+
+    <owl:Class rdf:about="&id3;OriginalRecordingConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#ReleaseYearConcept -->
+
+    <owl:Class rdf:about="&id3;ReleaseYearConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/id3.owl#YearRegion -->
+
+    <owl:Class rdf:about="&id3;YearRegion"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotatedConcept -->
+
+    <owl:Class rdf:about="&annotation;AnnotatedConcept"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationPattern -->
+
+    <owl:Class rdf:about="&annotation;AnnotationPattern"/>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationSituation -->
+
+    <owl:Class rdf:about="&annotation;AnnotationSituation"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="&DUL;Quality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ac-1 -->
+
+    <owl:Thing rdf:about="#ac-1">
+        <rdf:type rdf:resource="&annotation;AnnotatedConcept"/>
+        <DUL:classifies rdf:resource="#audio-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ac-2 -->
+
+    <owl:Thing rdf:about="#ac-2">
+        <rdf:type rdf:resource="&id3;ArtistConcept"/>
+        <DUL:parametrizes rdf:resource="#ar-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ar-1 -->
+
+    <owl:Thing rdf:about="#ar-1">
+        <rdf:type rdf:resource="&id3;ArtistRegion"/>
+        <DUL:hasDataValue rdf:datatype="&xsd;string">ABBA</DUL:hasDataValue>
+        <DUL:hasSetting rdf:resource="#id3as-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#audio-1 -->
+
+    <owl:Thing rdf:about="#audio-1">
+        <rdf:type rdf:resource="&id3;AudioObject"/>
+        <DUL:isObjectIncludedIn rdf:resource="#id3as-1"/>
+        <DUL:hasQuality rdf:resource="#q1"/>
+        <DUL:hasQuality rdf:resource="#q2"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#id3ap-1 -->
+
+    <ID3AnnotationPattern rdf:about="#id3ap-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </ID3AnnotationPattern>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#id3as-1 -->
+
+    <ID3AnnotationSituation rdf:about="#id3as-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:satisfies rdf:resource="#id3ap-1"/>
+    </ID3AnnotationSituation>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#orc-1 -->
+
+    <owl:Thing rdf:about="#orc-1">
+        <rdf:type rdf:resource="&id3;OriginalRecordingConcept"/>
+        <DUL:hasPart rdf:resource="#ac-2"/>
+        <DUL:hasPart rdf:resource="#ryc-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#q1 -->
+
+    <DUL:Quality rdf:about="#q1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasRegion rdf:resource="#ar-1"/>
+    </DUL:Quality>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#q2 -->
+
+    <owl:Thing rdf:about="#q2">
+        <rdf:type rdf:resource="&DUL;Quality"/>
+        <DUL:hasRegion rdf:resource="#ryr-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ryc-1 -->
+
+    <owl:Thing rdf:about="#ryc-1">
+        <rdf:type rdf:resource="&id3;ReleaseYearConcept"/>
+        <DUL:parametrizes rdf:resource="#ryr-1"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/examples/id3-example.owl#ryr-1 -->
+
+    <id3:YearRegion rdf:about="#ryr-1">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <DUL:hasDataValue rdf:datatype="&xsd;integer">1979</DUL:hasDataValue>
+        <DUL:hasSetting rdf:resource="#id3as-1"/>
+    </id3:YearRegion>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

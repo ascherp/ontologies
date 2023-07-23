@@ -1,0 +1,31 @@
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+ <head>
+   <layout type="text/smil-basic-layout">
+     <root-layout height="441px" width="676px" backgroundColor="white"/>
+     <region height="20px" width="676px" top="0px" left="0px" id="title"/>
+     <region height="401px" width="336px" top="20px" left="0px" id="left"/>
+     <region height="401px" width="336px" top="20px" left="340px" id="right"/>
+     <region height="20px" width="336px" top="421px" left="0px" id="tleft"/>
+     <region height="20px" width="336px" top="421px" left="336px" id="tright"/>
+     <region soundLevel="100%" id="music"/>
+   </layout>
+ </head>
+ <body>
+   <seq id="mainPresentation">
+     <par id="scientificAchievements">
+       <text type="text/plain" dur="60s" begin="0ms" region="title" src="title1.txt"/>
+       <img dur="60s" begin="0ms" region="left" src="Einstein.jpg" id="Einstein1"/>
+       <img dur="60s" begin="0ms" region="right" src="TimesSquare.jpg" id="timesSquare"/>
+       <text type="text/plain" dur="60s" begin="0ms" region="tleft" src="caption1.txt"/>
+       <text type="text/plain" dur="60s" begin="0ms" region="tright" src="caption2.txt"/>
+     </par>
+     <par id="scientificRisks">
+       <text type="text/plain" dur="60s" begin="0ms" region="title" src="title2.txt"/>
+       <img dur="60s" begin="0ms" region="left" src="Einstein.jpg" id="Einstein2"/>
+       <img dur="60s" begin="0ms" region="right" src="NagasakiBomb.jpg" id="nagasakiBomb"/>
+       <text type="text/plain" dur="60s" begin="0ms" region="tleft" src="caption1.txt"/>
+       <text type="text/plain" dur="60s" begin="0ms" region="tright" src="caption3.txt"/>
+     </par>
+    </seq>
+ </body>
+</smil>

@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+    <!ENTITY searchmonkey-media "http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:searchmonkey-media="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#">
+    <owl:Ontology rdf:about="http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ArticleRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ArticleRealization">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#AudioRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;AudioRealization">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#BitrateConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;BitrateConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#BitrateRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;BitrateRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ChannelsConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ChannelsConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ChannelsRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ChannelsRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#DurationConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;DurationConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#DurationRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;DurationRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#FilesizeConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;FilesizeConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#FilesizeRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;FilesizeRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#FramerateConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;FramerateConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#FramerateRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;FramerateRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#HeightConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;HeightConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#HeightRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;HeightRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ImageRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ImageRealization">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#MimeTypeConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;MimeTypeConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#MimeTypeRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;MimeTypeRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#PhotoRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;PhotoRealization">
+        <rdfs:subClassOf rdf:resource="&searchmonkey-media;ImageRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#SamplingRateConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;SamplingRateConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#SamplingRateRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;SamplingRateRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#TextRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;TextRealization">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ThumbnailRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ThumbnailRealization">
+        <rdfs:subClassOf rdf:resource="&searchmonkey-media;ImageRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#VideoRealization -->
+
+    <owl:Class rdf:about="&searchmonkey-media;VideoRealization">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ViewsConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ViewsConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#ViewsRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;ViewsRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#WidthConcept -->
+
+    <owl:Class rdf:about="&searchmonkey-media;WidthConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/searchmonkey-media.owl#WidthRegion -->
+
+    <owl:Class rdf:about="&searchmonkey-media;WidthRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="&DUL;Region"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1789) http://owlapi.sourceforge.net -->
+

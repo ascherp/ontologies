@@ -1,0 +1,73 @@
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+ <head>
+   <!-- Metadata -->
+   <metadata id="meta-rdf">
+<rdf:RDF xml:base="http://example.com/john/nuclear"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#" 
+    xmlns:m3odec="http://m3o.semantic-multimedia.org/ontology/annotation.owl#"
+    xmlns:m3osmil="http://m3o.semantic-multimedia.org/ontology/smil.owl#">
+    
+<dul:InformationObject rdf:about="#presentation-1">
+    <dul:isObjectIncludedIn rdf:resource="#ds-1" />
+</dul:InformationObject>
+<m3osmil:SMILFile rdf:about="http://example.com/john/nuclear.smil">
+    <dul:realizes rdf:resource="#presentation-1" />
+</m3osmil:SMILFile>
+<m3odec:DecompositionPattern rdf:about="#dp-1">
+    <dul:defines>
+        <m3odec:CompositeRole rdf:about="#cr-1">
+            <m3odec:classifies rdf:resource="#presentation-1" />
+        </m3odec:CompositeRole>
+    </dul:defines>
+    <dul:defines>
+        <m3odec:ComponentRole rdf:about="#cmpr-1">
+            <m3odec:classifies rdf:resource="#part-1" />
+        </m3odec:ComponentRole>
+    </dul:defines>
+    <dul:defines>
+        <m3odec:ComponentRole rdf:about="#cmpr-2">
+            <m3odec:classifies rdf:resource="#part-2" />
+        </m3odec:ComponentRole>
+    </dul:defines>
+</m3odec:DecompositionPattern>
+<dul:InformationObject rdf:about="#part-1">
+    <dul:isObjectIncludedIn rdf:resource="#ds-1" />
+</dul:InformationObject>
+<dul:InformationObject rdf:about="#part-2">
+    <dul:isObjectIncludedIn rdf:resource="#ds-1" />
+</dul:InformationObject>
+<m3odec:DecompositionSituation rdf:about="#ds-1">
+    <dul:satisfies rdf:resource="#dp-1" />
+</m3odec:DecompositionSituation>
+<m3osmil:SMILElement rdf:about="http://example.com/john/nuclear.smil#scientificAchievements">
+    <dul:realizes rdf:resource="#part-1" />
+</m3osmil:SMILElement>
+<m3osmil:SMILElement rdf:about="http://example.com/john/nuclear.smil#scientificRisks">
+    <dul:realizes rdf:resource="#part-2" />
+</m3osmil:SMILElement>
+</rdf:RDF>
+   </metadata>
+   <!-- Layout -->
+   <layout type="text/smil-basic-layout">
+     <root-layout height="401px" width="676px" backgroundColor="white"/>
+     <region height="401px" width="336px" top="0px" left="0px" id="left"/>
+     <region height="401px" width="336px" top="0px" left="340px" id="right"/>
+     <region soundLevel="100%" id="music"/>
+   </layout>
+ </head>
+ <body>
+   <!-- Presentation content -->
+   <seq id="mainPresentation">
+     <par id="scientificAchievements">
+       <img dur="60s" begin="0ms" region="left" src="Einstein.jpg" id="Einstein1"/>
+       <img dur="60s" begin="0ms" region="right" src="TimesSquare.jpg" id="timesSquare"/>
+      <!-- <text dur="60s" begin="0ms" region="right" src="" id="Text"/> -->
+     </par>
+     <par id="scientificRisks">
+       <img dur="60s" begin="0ms" region="left" src="Einstein.jpg" id="Einstein2"/>
+       <img dur="60s" begin="0ms" region="right" src="NagasakiBomb.jpg" id="nagasakiBomb"/>
+     </par>
+    </seq>
+ </body>
+</smil>

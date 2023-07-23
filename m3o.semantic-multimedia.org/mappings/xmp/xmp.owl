@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL2 "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#" >
+    <!ENTITY xmp "http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#" >
+    <!ENTITY ofmr "http://m3o.semantic-multimedia.org/mappings/ofmr/2010/06/12/ofmr.owl#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:ofmr="http://m3o.semantic-multimedia.org/mappings/ofmr/2010/06/12/ofmr.owl#"
+     xmlns:xmp="http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:DUL2="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#BooleanRegion -->
+
+    <owl:Class rdf:about="#BooleanRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#CertificateConcept -->
+
+    <owl:Class rdf:about="#CertificateConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#CertificateRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#CertificateRegion -->
+
+    <owl:Class rdf:about="#CertificateRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#CreateDateConcept -->
+
+    <owl:Class rdf:about="#CreateDateConcept">
+        <rdfs:subClassOf rdf:resource="#DateConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#CreatorToolConcept -->
+
+    <owl:Class rdf:about="#CreatorToolConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#CreatorToolRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#CreatorToolRegion -->
+
+    <owl:Class rdf:about="#CreatorToolRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#DateConcept -->
+
+    <owl:Class rdf:about="#DateConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#DateRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#DateRegion -->
+
+    <owl:Class rdf:about="#DateRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#DerivedFromConcept -->
+
+    <owl:Class rdf:about="#DerivedFromConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#DocumentIDConcept -->
+
+    <owl:Class rdf:about="#DocumentIDConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#InstanceIDConcept -->
+
+    <owl:Class rdf:about="#InstanceIDConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#LabelConcept -->
+
+    <owl:Class rdf:about="#LabelConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#LabelRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#LabelRegion -->
+
+    <owl:Class rdf:about="#LabelRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#MetadataDateConcept -->
+
+    <owl:Class rdf:about="#MetadataDateConcept">
+        <rdfs:subClassOf rdf:resource="#DateConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#ModifyDateConcept -->
+
+    <owl:Class rdf:about="#ModifyDateConcept">
+        <rdfs:subClassOf rdf:resource="#DateConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#OriginalDocumentIDConcept -->
+
+    <owl:Class rdf:about="#OriginalDocumentIDConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#OwnerConcept -->
+
+    <owl:Class rdf:about="#OwnerConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#OwnerRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#OwnerRegion -->
+
+    <owl:Class rdf:about="#OwnerRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RatingConcept -->
+
+    <owl:Class rdf:about="#RatingConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#RatingRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RatingRegion -->
+
+    <owl:Class rdf:about="#RatingRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RenditionClassRegion -->
+
+    <owl:Class rdf:about="#RenditionClassRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RenditionParameterRegion -->
+
+    <owl:Class rdf:about="#RenditionParameterRegion">
+        <rdfs:subClassOf rdf:resource="#RenditionClassRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RightsMarkedConcept -->
+
+    <owl:Class rdf:about="#RightsMarkedConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#BooleanRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#UsageTermsConcept -->
+
+    <owl:Class rdf:about="#UsageTermsConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#UsageTermsRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#UsageTermsRegion -->
+
+    <owl:Class rdf:about="#UsageTermsRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#WebStatementConcept -->
+
+    <owl:Class rdf:about="#WebStatementConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#WebStatementRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#WebStatementRegion -->
+
+    <owl:Class rdf:about="#WebStatementRegion">
+        <rdfs:subClassOf rdf:resource="&DUL2;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#BasicConcept -->
+
+    <owl:Class rdf:about="#BasicConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#CreateDateConcept"/>
+                            <rdf:Description rdf:about="#CreatorToolConcept"/>
+                            <rdf:Description rdf:about="#LabelConcept"/>
+                            <rdf:Description rdf:about="#MetadataDateConcept"/>
+                            <rdf:Description rdf:about="#ModifyDateConcept"/>
+                            <rdf:Description rdf:about="#RatingConcept"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/2011/04/20/xmp.owl#RightsManagementConcept -->
+
+    <owl:Class rdf:about="#RightsManagementConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasPart"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#CertificateConcept"/>
+                            <rdf:Description rdf:about="#OwnerConcept"/>
+                            <rdf:Description rdf:about="#RightsMarkedConcept"/>
+                            <rdf:Description rdf:about="#UsageTermsConcept"/>
+                            <rdf:Description rdf:about="#WebStatementConcept"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/ofmr/2010/06/12/ofmr.owl#RenditionClassConcept -->
+
+    <owl:Class rdf:about="&ofmr;RenditionClassConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#RenditionClassRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+     
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/ofmr/2010/06/12/ofmr.owl#RenditionParameterConcept -->
+
+    <owl:Class rdf:about="&ofmr;RenditionParameterConcept">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#RenditionParameterRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/ofmr/2010/06/12/ofmr.owl#MediaManagement -->
+
+    <owl:Class rdf:about="&ofmr;MediaManagement">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationConcept -->
+
+    <owl:Class rdf:about="&annotation;AnnotationConcept"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="&DUL;InformationEntity"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationRealization -->
+
+    <owl:Class rdf:about="&DUL;InformationRealization"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region -->
+
+    <owl:Class rdf:about="&DUL2;Region"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,1807 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY exif "http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#" >
+    <!ENTITY annotation "http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#"
+     xml:base="http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl"
+     xmlns:exif="http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#"
+     xmlns:annotation="http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://m3o.semantic-multimedia.org/ontology/2010/02/28/annotation.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#classifies -->
+
+    <owl:ObjectProperty rdf:about="&DUL;classifies"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="&DUL;hasRegion"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#isQualityOf -->
+
+    <owl:ObjectProperty rdf:about="&DUL;isQualityOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#apertureValue -->
+
+    <owl:DatatypeProperty rdf:about="#apertureValue">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#artist -->
+
+    <owl:DatatypeProperty rdf:about="#artist">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#bitsPerSample -->
+
+    <owl:DatatypeProperty rdf:about="#bitsPerSample">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#brightnessValue -->
+
+    <owl:DatatypeProperty rdf:about="#brightnessValue">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#colorSpace -->
+
+    <owl:DatatypeProperty rdf:about="#colorSpace">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#componentsConfiguration -->
+
+    <owl:DatatypeProperty rdf:about="#componentsConfiguration">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#compression -->
+
+    <owl:DatatypeProperty rdf:about="#compression">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#compressionBitsPerPixel -->
+
+    <owl:DatatypeProperty rdf:about="#compressionBitsPerPixel">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#contrast -->
+
+    <owl:DatatypeProperty rdf:about="#contrast">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#copyright -->
+
+    <owl:DatatypeProperty rdf:about="#copyright">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#customRendered -->
+
+    <owl:DatatypeProperty rdf:about="#customRendered">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#dateTime -->
+
+    <owl:DatatypeProperty rdf:about="#dateTime">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#dateTimeDigitized -->
+
+    <owl:DatatypeProperty rdf:about="#dateTimeDigitized">
+        <rdfs:domain rdf:resource="#EXIFDateAndTimeRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#dateTimeOriginal -->
+
+    <owl:DatatypeProperty rdf:about="#dateTimeOriginal">
+        <rdfs:domain rdf:resource="#EXIFDateAndTimeRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#deviceSettingDescription -->
+
+    <owl:DatatypeProperty rdf:about="#deviceSettingDescription">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#digitalZoomRatio -->
+
+    <owl:DatatypeProperty rdf:about="#digitalZoomRatio">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#exifVersion -->
+
+    <owl:DatatypeProperty rdf:about="#exifVersion">
+        <rdfs:domain rdf:resource="#EXIFVersionRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#exposureBiasValue -->
+
+    <owl:DatatypeProperty rdf:about="#exposureBiasValue">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#exposureIndex -->
+
+    <owl:DatatypeProperty rdf:about="#exposureIndex">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#exposureMode -->
+
+    <owl:DatatypeProperty rdf:about="#exposureMode">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#exposureProgram -->
+
+    <owl:DatatypeProperty rdf:about="#exposureProgram">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#exposureTime -->
+
+    <owl:DatatypeProperty rdf:about="#exposureTime">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#fNumber -->
+
+    <owl:DatatypeProperty rdf:about="#fNumber">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#fileSource -->
+
+    <owl:DatatypeProperty rdf:about="#fileSource">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#flash -->
+
+    <owl:DatatypeProperty rdf:about="#flash">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#flashEnergy -->
+
+    <owl:DatatypeProperty rdf:about="#flashEnergy">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#flashpixVersion -->
+
+    <owl:DatatypeProperty rdf:about="#flashpixVersion">
+        <rdfs:domain rdf:resource="#EXIFVersionRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#focalLength -->
+
+    <owl:DatatypeProperty rdf:about="#focalLength">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#focalLengthIn35mmFilm -->
+
+    <owl:DatatypeProperty rdf:about="#focalLengthIn35mmFilm">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#focalPlaneResolutionUnit -->
+
+    <owl:DatatypeProperty rdf:about="#focalPlaneResolutionUnit">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#focalPlaneXResolution -->
+
+    <owl:DatatypeProperty rdf:about="#focalPlaneXResolution">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#focalPlaneYResolution -->
+
+    <owl:DatatypeProperty rdf:about="#focalPlaneYResolution">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gainControl -->
+
+    <owl:DatatypeProperty rdf:about="#gainControl">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsAreaInformation -->
+
+    <owl:DatatypeProperty rdf:about="#gpsAreaInformation">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsAttitude -->
+
+    <owl:DatatypeProperty rdf:about="#gpsAttitude">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsAttitudeRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsAttitudeRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDateStamp -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDateStamp">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestBearing -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestBearing">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestBearingRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestBearingRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestDistance -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestDistance">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestDistanceRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestDistanceRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestLatitude -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestLatitude">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestLatitudeRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestLatitudeRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestLongitude -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestLongitude">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDestLongitudeRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDestLongitudeRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsDifferential -->
+
+    <owl:DatatypeProperty rdf:about="#gpsDifferential">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsImgDirection -->
+
+    <owl:DatatypeProperty rdf:about="#gpsImgDirection">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsImgDirectionRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsImgDirectionRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsLatitude -->
+
+    <owl:DatatypeProperty rdf:about="#gpsLatitude">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsLatitudeRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsLatitudeRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsLongitude -->
+
+    <owl:DatatypeProperty rdf:about="#gpsLongitude">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsLongitudeRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsLongitudeRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsMapDatum -->
+
+    <owl:DatatypeProperty rdf:about="#gpsMapDatum">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsMeasureMode -->
+
+    <owl:DatatypeProperty rdf:about="#gpsMeasureMode">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsProcessingMethod -->
+
+    <owl:DatatypeProperty rdf:about="#gpsProcessingMethod">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsSDOP -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSDOP">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsSatellites -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSatellites">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsSpeed -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSpeed">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsSpeedRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsSpeedRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsStatus -->
+
+    <owl:DatatypeProperty rdf:about="#gpsStatus">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="#gpsTimeStamp">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsTrack -->
+
+    <owl:DatatypeProperty rdf:about="#gpsTrack">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsTrackRef -->
+
+    <owl:DatatypeProperty rdf:about="#gpsTrackRef">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsVersionID -->
+
+    <owl:DatatypeProperty rdf:about="#gpsVersionID">
+        <rdfs:domain rdf:resource="#EXIFGPSRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;byte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#gpsaPattern -->
+
+    <owl:DatatypeProperty rdf:about="#gpsaPattern">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#imageDescription -->
+
+    <owl:DatatypeProperty rdf:about="#imageDescription">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#imageLength -->
+
+    <owl:DatatypeProperty rdf:about="#imageLength">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#imageWidth -->
+
+    <owl:DatatypeProperty rdf:about="#imageWidth">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#interoperabilityIndex -->
+
+    <owl:DatatypeProperty rdf:about="#interoperabilityIndex">
+        <rdfs:domain rdf:resource="#EXIFInteroperabilityRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#isoSpeedRatings -->
+
+    <owl:DatatypeProperty rdf:about="#isoSpeedRatings">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#jpegInterchangeFormat -->
+
+    <owl:DatatypeProperty rdf:about="#jpegInterchangeFormat">
+        <rdfs:domain rdf:resource="#EXIFRecordingOffsetRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#jpegInterchangeFormatLength -->
+
+    <owl:DatatypeProperty rdf:about="#jpegInterchangeFormatLength">
+        <rdfs:domain rdf:resource="#EXIFRecordingOffsetRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#lightSource -->
+
+    <owl:DatatypeProperty rdf:about="#lightSource">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#make -->
+
+    <owl:DatatypeProperty rdf:about="#make">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#makerNote -->
+
+    <owl:DatatypeProperty rdf:about="#makerNote">
+        <rdfs:domain rdf:resource="#EXIFUserInformationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#maxApertureValue -->
+
+    <owl:DatatypeProperty rdf:about="#maxApertureValue">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#meteringMode -->
+
+    <owl:DatatypeProperty rdf:about="#meteringMode">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#model -->
+
+    <owl:DatatypeProperty rdf:about="#model">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#oecf -->
+
+    <owl:DatatypeProperty rdf:about="#oecf">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#orientation -->
+
+    <owl:DatatypeProperty rdf:about="#orientation">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#photometricInterpretation -->
+
+    <owl:DatatypeProperty rdf:about="#photometricInterpretation">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#pixelXDimension -->
+
+    <owl:DatatypeProperty rdf:about="#pixelXDimension">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#pixelYDimension -->
+
+    <owl:DatatypeProperty rdf:about="#pixelYDimension">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#planarConfiguration -->
+
+    <owl:DatatypeProperty rdf:about="#planarConfiguration">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#primaryChromaticities -->
+
+    <owl:DatatypeProperty rdf:about="#primaryChromaticities">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#referenceBlackWhite -->
+
+    <owl:DatatypeProperty rdf:about="#referenceBlackWhite">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#relatedSoundFile -->
+
+    <owl:DatatypeProperty rdf:about="#relatedSoundFile">
+        <rdfs:domain rdf:resource="#EXIFRelatedFileRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#resolutionUnit -->
+
+    <owl:DatatypeProperty rdf:about="#resolutionUnit">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#rowsPerStrip -->
+
+    <owl:DatatypeProperty rdf:about="#rowsPerStrip">
+        <rdfs:domain rdf:resource="#EXIFRecordingOffsetRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#samplesPerPixel -->
+
+    <owl:DatatypeProperty rdf:about="#samplesPerPixel">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#saturation -->
+
+    <owl:DatatypeProperty rdf:about="#saturation">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#sceneCaptureType -->
+
+    <owl:DatatypeProperty rdf:about="#sceneCaptureType">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#sceneType -->
+
+    <owl:DatatypeProperty rdf:about="#sceneType">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#sensingMethod -->
+
+    <owl:DatatypeProperty rdf:about="#sensingMethod">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#sharpness -->
+
+    <owl:DatatypeProperty rdf:about="#sharpness">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#shutterSpeedValue -->
+
+    <owl:DatatypeProperty rdf:about="#shutterSpeedValue">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#software -->
+
+    <owl:DatatypeProperty rdf:about="#software">
+        <rdfs:domain rdf:resource="#EXIFCreationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#spatialFrequencyResponse -->
+
+    <owl:DatatypeProperty rdf:about="#spatialFrequencyResponse">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#spectralSensitivity -->
+
+    <owl:DatatypeProperty rdf:about="#spectralSensitivity">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#stripByteCounts -->
+
+    <owl:DatatypeProperty rdf:about="#stripByteCounts">
+        <rdfs:domain rdf:resource="#EXIFRecordingOffsetRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#stripOffsets -->
+
+    <owl:DatatypeProperty rdf:about="#stripOffsets">
+        <rdfs:domain rdf:resource="#EXIFRecordingOffsetRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subSecTime -->
+
+    <owl:DatatypeProperty rdf:about="#subSecTime">
+        <rdfs:domain rdf:resource="#EXIFDateAndTimeRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subSecTimeDigitized -->
+
+    <owl:DatatypeProperty rdf:about="#subSecTimeDigitized">
+        <rdfs:domain rdf:resource="#EXIFDateAndTimeRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subSecTimeOriginal -->
+
+    <owl:DatatypeProperty rdf:about="#subSecTimeOriginal">
+        <rdfs:domain rdf:resource="#EXIFDateAndTimeRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subjectArea -->
+
+    <owl:DatatypeProperty rdf:about="#subjectArea">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subjectDistance -->
+
+    <owl:DatatypeProperty rdf:about="#subjectDistance">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subjectDistanceRange -->
+
+    <owl:DatatypeProperty rdf:about="#subjectDistanceRange">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#subjectLocation -->
+
+    <owl:DatatypeProperty rdf:about="#subjectLocation">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#transferFunction -->
+
+    <owl:DatatypeProperty rdf:about="#transferFunction">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#userComment -->
+
+    <owl:DatatypeProperty rdf:about="#userComment">
+        <rdfs:domain rdf:resource="#EXIFUserInformationRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#whiteBalance -->
+
+    <owl:DatatypeProperty rdf:about="#whiteBalance">
+        <rdfs:domain rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#whitePoint -->
+
+    <owl:DatatypeProperty rdf:about="#whitePoint">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#xResolution -->
+
+    <owl:DatatypeProperty rdf:about="#xResolution">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#yCbCrCoefficients -->
+
+    <owl:DatatypeProperty rdf:about="#yCbCrCoefficients">
+        <rdfs:domain rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#yCbCrPositioning -->
+
+    <owl:DatatypeProperty rdf:about="#yCbCrPositioning">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#yCbCrSubSampling -->
+
+    <owl:DatatypeProperty rdf:about="#yCbCrSubSampling">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;short"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#yResolution -->
+
+    <owl:DatatypeProperty rdf:about="#yResolution">
+        <rdfs:domain rdf:resource="#EXIFImageDataStructureRegion"/>
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasDataValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="&DUL;hasDataValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFCreationParameter -->
+
+    <owl:Class rdf:about="#EXIFCreationParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFCreationRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFCreationQuality -->
+
+    <owl:Class rdf:about="#EXIFCreationQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFCreationRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFCreationRegion -->
+
+    <owl:Class rdf:about="#EXIFCreationRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFDateAndTimeParameter -->
+
+    <owl:Class rdf:about="#EXIFDateAndTimeParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFDateAndTimeRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFDateAndTimeQuality -->
+
+    <owl:Class rdf:about="#EXIFDateAndTimeQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFDateAndTimeRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFDateAndTimeRegion -->
+
+    <owl:Class rdf:about="#EXIFDateAndTimeRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFGPSParameter -->
+
+    <owl:Class rdf:about="#EXIFGPSParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFGPSRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFGPSQuality -->
+
+    <owl:Class rdf:about="#EXIFGPSQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFGPSRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFGPSRegion -->
+
+    <owl:Class rdf:about="#EXIFGPSRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageConfigurationParameter -->
+
+    <owl:Class rdf:about="#EXIFImageConfigurationParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFImageConfigurationRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageConfigurationQuality -->
+
+    <owl:Class rdf:about="#EXIFImageConfigurationQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFImageConfigurationRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageConfigurationRegion -->
+
+    <owl:Class rdf:about="#EXIFImageConfigurationRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageDataCharacteristicsParameter -->
+
+    <owl:Class rdf:about="#EXIFImageDataCharacteristicsParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageDataCharacteristicsQuality -->
+
+    <owl:Class rdf:about="#EXIFImageDataCharacteristicsQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFImageDataCharacteristicsRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageDataCharacteristicsRegion -->
+
+    <owl:Class rdf:about="#EXIFImageDataCharacteristicsRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageDataStructureParameter -->
+
+    <owl:Class rdf:about="#EXIFImageDataStructureParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFImageDataStructureRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageDataStructureQuality -->
+
+    <owl:Class rdf:about="#EXIFImageDataStructureQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFImageDataStructureRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFImageDataStructureRegion -->
+
+    <owl:Class rdf:about="#EXIFImageDataStructureRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFInteroperabilityParameter -->
+
+    <owl:Class rdf:about="#EXIFInteroperabilityParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFInteroperabilityRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFInteroperabilityQuality -->
+
+    <owl:Class rdf:about="#EXIFInteroperabilityQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFInteroperabilityRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFInteroperabilityRegion -->
+
+    <owl:Class rdf:about="#EXIFInteroperabilityRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFPictureTakingConditionsParameter -->
+
+    <owl:Class rdf:about="#EXIFPictureTakingConditionsParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFPictureTakingConditionsQuality -->
+
+    <owl:Class rdf:about="#EXIFPictureTakingConditionsQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFPictureTakingConditionsRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFPictureTakingConditionsRegion -->
+
+    <owl:Class rdf:about="#EXIFPictureTakingConditionsRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRecordingOffsetParameter -->
+
+    <owl:Class rdf:about="#EXIFRecordingOffsetParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFRecordingOffsetRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRecordingOffsetQuality -->
+
+    <owl:Class rdf:about="#EXIFRecordingOffsetQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFRecordingOffsetRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRecordingOffsetRegion -->
+
+    <owl:Class rdf:about="#EXIFRecordingOffsetRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRegion -->
+
+    <owl:Class rdf:about="#EXIFRegion">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRelatedFileParameter -->
+
+    <owl:Class rdf:about="#EXIFRelatedFileParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFRelatedFileRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRelatedFileQuality -->
+
+    <owl:Class rdf:about="#EXIFRelatedFileQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFRelatedFileRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFRelatedFileRegion -->
+
+    <owl:Class rdf:about="#EXIFRelatedFileRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFUserInformationParameter -->
+
+    <owl:Class rdf:about="#EXIFUserInformationParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFUserInformationRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFUserInformationQuality -->
+
+    <owl:Class rdf:about="#EXIFUserInformationQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFUserInformationRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFUserInformationRegion -->
+
+    <owl:Class rdf:about="#EXIFUserInformationRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFVersionParameter -->
+
+    <owl:Class rdf:about="#EXIFVersionParameter">
+        <rdfs:subClassOf rdf:resource="&annotation;AnnotationConcept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;classifies"/>
+                <owl:allValuesFrom rdf:resource="#EXIFVersionRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFVersionQuality -->
+
+    <owl:Class rdf:about="#EXIFVersionQuality">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;isQualityOf"/>
+                <owl:allValuesFrom rdf:resource="#ImageRealization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&DUL;hasRegion"/>
+                <owl:allValuesFrom rdf:resource="#EXIFVersionRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#EXIFVersionRegion -->
+
+    <owl:Class rdf:about="#EXIFVersionRegion">
+        <rdfs:subClassOf rdf:resource="#EXIFRegion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#ImageObject -->
+
+    <owl:Class rdf:about="#ImageObject">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/mappings/exif/2010/06/12/exif.owl#ImageRealization -->
+
+    <owl:Class rdf:about="#ImageRealization">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationRealization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://m3o.semantic-multimedia.org/ontology/2009/09/16/annotation.owl#AnnotationConcept -->
+
+    <owl:Class rdf:about="&annotation;AnnotationConcept"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationObject -->
+
+    <owl:Class rdf:about="&DUL;InformationObject"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#InformationRealization -->
+
+    <owl:Class rdf:about="&DUL;InformationRealization"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Quality -->
+
+    <owl:Class rdf:about="&DUL;Quality"/>
+    
+
+
+    <!-- http://www.loa-cnr.it/ontologies/DUL.owl#Region -->
+
+    <owl:Class rdf:about="&DUL;Region"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
